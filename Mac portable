@@ -1,0 +1,12 @@
+index.htm<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mac Portable M1</title>
+</head>
+<body>
+  <h1>Vítej na stránce Mac Portable M1</h1>
+  <img src="tvuj-obrazek.jpg" alt="Mac Portable M1" style="max-width: 100%;">
+  <p>Toto je můj vlastní projekt počítače Mac Portable M1.</p>
+</body>
+</html>
