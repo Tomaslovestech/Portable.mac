@@ -189,5 +189,35 @@
       el.style.display = isVisible ? 'none' : 'block';
       btn.textContent = isVisible ? 'Read more' : 'Read less';
     }
-  </script></body>
+  </script></body><section>
+  <h2>Apple USB Hub</h2>
+  <p>Compatible with MacBook, iPad, iPhone and entire Apple ecosystem.</p>
+  <img src="appleusbhub.png" alt="Apple USB Hub" />
+  <ul>
+    <button onclick="toggleUSBHub()" id="readMoreUSB">Read more</button>
+  </ul>
+  <div id="usbMore" style="display: none;">
+    <ul>
+      <li>Hub contains:</li>
+      <li>SD card reader</li>
+      <li>3× USB 3.0 ports</li>
+      <li>2× USB-C ports</li>
+      <li>HDMI output</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+  function toggleUSBHub() {
+    const more = document.getElementById("usbMore");
+    const btn = document.getElementById("readMoreUSB");
+    if (more.style.display === "none") {
+      more.style.display = "block";
+      btn.innerText = "Read less";
+    } else {
+      more.style.display = "none";
+      btn.innerText = "Read more";
+    }
+  }
+</script> 
  </html>
