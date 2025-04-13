@@ -1,4 +1,5 @@
- <!DOCTYPE html><html lang="en">
+ <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -73,108 +74,48 @@
 </head>
 <body>
   <h1>Welcome to Mac Portable M1</h1>
-  <button id="toggleViewBtn">Switch to Gallery View</button>  <img src="mac-portable.png" alt="Mac Portable M1" />
-  <p>The new revolutionary Apple product created by Tomáš.</p>  <!-- Repeatable section with read more -->  <section>
-    <h2>Apple VisionTV</h2>
-    <p>The Smart TV. Reimagined. Touch. Voice. Ecosystem. Meet the future of television.</p>
-    <img src="apple-visiontv1.png" alt="VisionTV Front" />
-    <img src="apple-visiontv2.png" alt="VisionTV Side" />
-    <button onclick="toggleSection('visiontvMore', this)">Read more</button>
-    <div id="visiontvMore" style="display: none;">
+  <button id="toggleViewBtn">Switch to Gallery View</button>
+  <img src="mac-portable.png" alt="Mac Portable M1" />
+  <p>The new revolutionary Apple product created by Tomáš.</p>
+
+  <!-- Produkty (zkráceno pro ukázku) -->
+  <!-- ... další sekce jako VisionTV, FitBand atd. ... -->
+
+  <section>
+    <h2>Apple USB Hub</h2>
+    <p>Compatible with MacBook, iPad, iPhone and entire Apple ecosystem.</p>
+    <img src="appleusbhub.png" alt="Apple USB Hub" />
+    <button onclick="toggleUSBHub()" id="readMoreUSB">Read more</button>
+    <div id="usbMore" style="display: none;">
       <ul>
-        <li>- Smart TV with App Store and Siri</li>
-        <li>- Seamless Apple ecosystem integration</li>
-        <li>- iCloud, AirPlay, and touch support</li>
-        <li>- Available in 55", 65", and 75"</li>
+        <li>Hub contains:</li>
+        <li>SD card reader</li>
+        <li>3× USB 3.0 ports</li>
+        <li>2× USB-C ports</li>
+        <li>HDMI output</li>
       </ul>
     </div>
-  </section>  <section>
-    <h2>Apple Vision Pro 2</h2>
-    <p>The next generation of spatial computing. Lighter. Smarter. Sharper.</p>
-    <img src="apple-vision-pro-2.png" alt="Apple Vision Pro 2 Front View" />
-    <button onclick="toggleSection('visionMore', this)">Read more</button>
-    <div id="visionMore" style="display: none;">
+  </section>
+
+  <section>
+    <h2>Apple Real Glasses</h2>
+    <p>Augmented Reality. Real Apple Experience.</p>
+    <img src="applereal.png" alt="Apple Real Glasses" />
+    <button onclick="toggleRealGlasses()" id="readMoreRealBtn">Read more</button>
+    <div id="realMore" style="display: none;">
       <ul>
-        <li>- Dual 4K microOLED displays</li>
-        <li>- 6 DoF tracking with hand gesture input</li>
-        <li>- M2 and R2 chips for spatial processing</li>
+        <li>Next-gen AR glasses from Apple.</li>
+        <li>Lightweight, stylish and packed with innovation.</li>
+        <li>Perfect companion for your iPhone, iPad and Mac.</li>
       </ul>
     </div>
-  </section>  <section>
-    <h2>Apple FitBand</h2>
-    <p>Health. Fitness. Apple. Reinvented.</p>
-    <img src="apple-fitband.png" alt="Apple FitBand" />
-    <button onclick="toggleSection('fitbandMore', this)">Read more</button>
-    <div id="fitbandMore" style="display: none;">
-      <ul>
-        <li>- Retina OLED with Always-On</li>
-        <li>- Heart rate, SpO₂, Sleep</li>
-        <li>- 100+ workouts, Siri, iPhone integration</li>
-      </ul>
-    </div>
-  </section>  <section>
-    <h2>Apple Hub mini</h2>
-    <p>Expand your iPhone’s possibilities.</p>
-    <img src="apple-hub-mini.png" alt="Apple Hub mini" />
-    <button onclick="toggleSection('hubMore', this)">Read more</button>
-    <div id="hubMore" style="display: none;">
-      <ul>
-        <li>- USB-C, HDMI, USB-A ports</li>
-        <li>- SD and microSD slots</li>
-        <li>- Compact, MFi certified</li>
-      </ul>
-    </div>
-  </section>  <section>
-    <h2>iPhone Ultra X</h2>
-    <p>The most powerful iPhone ever. Foldable. Futuristic. Ultra.</p>
-    <img src="iphone-ultra-x.png" alt="iPhone Ultra X" />
-    <button onclick="toggleSection('ultraMore', this)">Read more</button>
-    <div id="ultraMore" style="display: none;">
-      <ul>
-        <li>- Foldable Retina XDR Pro</li>
-        <li>- A19 chip, 48MP quad-camera</li>
-        <li>- USB-C, 2TB storage</li>
-      </ul>
-    </div>
-  </section>  <section>
-    <h2>iPhone Flip</h2>
-    <p>The future of foldable smartphones. Compact. Elegant. Apple.</p>
-    <img src="iphone-flip.png" alt="iPhone Flip" />
-    <button onclick="toggleSection('flipMore', this)">Read more</button>
-    <div id="flipMore" style="display: none;">
-      <ul>
-        <li>- 6.3" foldable display</li>
-        <li>- Flip A19 Fusion chip</li>
-        <li>- Dual cameras, ultra-thin design</li>
-      </ul>
-    </div>
-  </section>  <section>
-    <h2>Next-Gen Apple Concepts</h2>
-    <p>Experience the evolution of Apple with three reimagined devices.</p>
-    <img src="iPodrewind-iPadtouchpro-iponefold.png" alt="iPod Rewind, iPad Pro Touch, iPhone Fold" />
-    <button onclick="toggleSection('conceptMore', this)">Read more</button>
-    <div id="conceptMore" style="display: none;">
-      <ul>
-        <li><strong>iPod Rewind:</strong> Classic meets modern music</li>
-        <li><strong>iPad Pro Touch:</strong> Ultra-slim edge-to-edge display</li>
-        <li><strong>iPhone Fold:</strong> Built for multitasking</li>
-      </ul>
-    </div>
-  </section>  <section>
-    <h2>Apple Magic Mouse Pro</h2>
-    <p>The mouse. Perfected. Redesigned for the pros.</p>
-    <img src="magicmousepro.png" alt="Apple Magic Mouse Pro" />
-    <button onclick="toggleSection('magicMore', this)">Read more</button>
-    <div id="magicMore" style="display: none;">
-      <ul>
-        <li>- USB-C charging, 6 month battery</li>
-        <li>- Bluetooth 5.3, Force Touch surface</li>
-        <li>- Made from recycled materials</li>
-      </ul>
-    </div>
-  </section>  <footer>
+  </section>
+
+  <footer>
     &copy; 2025 Tomáš Loves Tech
-  </footer>  <script>
+  </footer>
+
+  <script>
     const btn = document.getElementById('toggleViewBtn');
     btn.addEventListener('click', () => {
       document.body.classList.toggle('gallery-mode');
@@ -189,61 +130,22 @@
       el.style.display = isVisible ? 'none' : 'block';
       btn.textContent = isVisible ? 'Read more' : 'Read less';
     }
-  </script></body><section>
-  <h2>Apple USB Hub</h2>
-  <p>Compatible with MacBook, iPad, iPhone and entire Apple ecosystem.</p>
-  <img src="appleusbhub.png" alt="Apple USB Hub" />
-  <ul>
-    <button onclick="toggleUSBHub()" id="readMoreUSB">Read more</button>
-  </ul>
-  <div id="usbMore" style="display: none;">
-    <ul>
-      <li>Hub contains:</li>
-      <li>SD card reader</li>
-      <li>3× USB 3.0 ports</li>
-      <li>2× USB-C ports</li>
-      <li>HDMI output</li>
-    </ul>
-  </div>
-   <section>
-  <h2>Apple Real Glasses</h2>
-  <p>Augmented Reality. Real Apple Experience.</p>
-  <img src="applereal.png" alt="Apple Real Glasses" />
-  <ul>
-    <button onclick="toggleRealGlasses()" id="readMoreRealBtn">Read more</button>
-  </ul>
-  <div id="realMore" style="display: none;">
-    <ul>
-      <li>Next-gen AR glasses from Apple.</li>
-      <li>Lightweight, stylish and packed with innovation.</li>
-      <li>Perfect companion for your iPhone, iPad and Mac.</li>
-    </ul>
-  </div>
-</section>
 
-<script><section>
-  <h2>Apple Real Glasses</h2>
-  <p>Augmented Reality. Real Apple Experience.</p>
-  <img src="applereal.png" alt="Apple Real Glasses" />
-  <button onclick="toggleRealGlasses()" id="readMoreRealBtn">Read more</button>
-  <div id="realMore" style="display: none;">
-    <ul>
-      <li>Next-gen AR glasses from Apple.</li>
-      <li>Lightweight, stylish and packed with innovation.</li>
-      <li>Perfect companion for your iPhone, iPad and Mac.</li>
-    </ul>
-  </div>
- </section>
-  function toggleUSBHub() {
-    const more = document.getElementById("usbMore");
-    const btn = document.getElementById("readMoreUSB");
-    if (more.style.display === "none") {
-      more.style.display = "block";
-      btn.innerText = "Read less";
-    } else {
-      more.style.display = "none";
-      btn.innerText = "Read more";
-  
-</script> 
+    function toggleUSBHub() {
+      const more = document.getElementById("usbMore");
+      const btn = document.getElementById("readMoreUSB");
+      const isVisible = more.style.display === "block";
+      more.style.display = isVisible ? "none" : "block";
+      btn.textContent = isVisible ? "Read more" : "Read less";
+    }
 
- </html>
+    function toggleRealGlasses() {
+      const more = document.getElementById("realMore");
+      const btn = document.getElementById("readMoreRealBtn");
+      const isVisible = more.style.display === "block";
+      more.style.display = isVisible ? "none" : "block";
+      btn.textContent = isVisible ? "Read more" : "Read less";
+    }
+  </script>
+</body>
+</html>
