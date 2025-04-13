@@ -233,5 +233,11 @@
       btn.innerText = "Read more";
     }
   }
-</script> 
+</script> function toggleRealGlasses() {
+  const realMore = document.getElementById("realMore");
+  const btn = document.getElementById("readMoreRealBtn");
+  const isVisible = realMore.style.display === "block";
+  realMore.style.display = isVisible ? "none" : "block";
+  btn.textContent = isVisible ? "Read more" : "Read less";
+}
  </html>
