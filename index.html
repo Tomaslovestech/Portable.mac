@@ -9,111 +9,187 @@
       background-color: #000;
       color: #fff;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
       text-align: center;
+      padding: 40px;
+    }
+
+    h1, h2 {
       color: #ccc;
-      margin-bottom: 40px;
     }
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .product {
-      background-color: #111;
+    img {
+      width: 80%;
+      max-width: 500px;
+      margin: 20px auto;
+      display: block;
       border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
 
-    .product img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: contain;
-      border-radius: 15px;
-      margin-bottom: 15px;
-    }
-
-    .product h2 {
-      color: #fff;
-      margin-bottom: 10px;
-    }
-
-    .product p {
-      color: #ccc;
-      font-size: 16px;
+    p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 30px;
     }
 
     footer {
-      text-align: center;
-      color: #888;
       margin-top: 40px;
       font-size: 14px;
+      color: #888;
+    }
+
+    ul {
+      text-align: left;
+      display: inline-block;
+      margin: 0 auto 30px;
+      padding: 0;
+      list-style: none;
+    }
+
+    #toggleViewBtn {
+      background-color: #444;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+
+    .gallery-mode section {
+      display: inline-block;
+      width: 300px;
+      vertical-align: top;
+      margin: 20px;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+
+    .gallery-mode img {
+      width: 100%;
+      max-width: none;
+      margin: 10px 0;
+    }
+
+    .gallery-mode p,
+    .gallery-mode ul {
+      text-align: left;
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Apple Creations</h1>
+  <h1>Welcome to Mac Portable M1</h1>
+  <button id="toggleViewBtn">Switch to Gallery View</button>
 
-  <div class="products">
+  <img src="mac-portable.png" alt="Mac Portable M1" />
+  <p>The new revolutionary Apple product created by Tomáš.</p>
 
-    <div class="product">
-      <img src="mac-portable.png" alt="Mac Portable M1">
-      <h2>Mac Portable M1</h2>
-      <p>The new revolutionary Apple product created by Tomáš.</p>
-    </div>
+  <section>
+    <h2>Apple VisionTV</h2>
+    <p>The Smart TV. Reimagined. Touch. Voice. Ecosystem. Meet the future of television.</p>
+    <img src="apple-visiontv1.png" alt="VisionTV Front" />
+    <p>Smart TV with App Store, iCloud, tvOS, touch, Siri, collaboration with Apple ecosystem, and more.</p>
+    <img src="apple-visiontv2.png" alt="VisionTV Side" />
+  </section>
 
-    <div class="product">
-      <img src="apple-visiontv1.png" alt="Apple VisionTV Front">
-      <h2>Apple VisionTV</h2>
-      <p>Smart TV. Touch. Voice. Ecosystem. Welcome to the future of television.</p>
-    </div>
+  <section>
+    <h2>Apple Vision Pro 2</h2>
+    <p>The next generation of spatial computing. Lighter. Smarter. Sharper.</p>
+    <img src="apple-vision-pro-2.png" alt="Apple Vision Pro 2 Front View" />
+  </section>
 
-    <div class="product">
-      <img src="apple-visiontv2.png" alt="Apple VisionTV Side">
-      <h2>Apple VisionTV - Side View</h2>
-      <p>Immersive design that blends into any environment.</p>
-    </div>
+  <section>
+    <h2>Apple FitBand</h2>
+    <p>Health. Fitness. Apple. Reinvented.</p>
+    <img src="apple-fitband.png" alt="Apple FitBand" />
+    <p>
+      Track your heart rate, sleep, workouts, and stay connected — all from your wrist.
+      With Retina OLED, Siri support, up to 10 days battery life, and water resistance,
+      Apple FitBand is made for your lifestyle.
+    </p>
+    <ul>
+      <li>- Retina OLED Display with Always-On</li>
+      <li>- Health+ sensors: Heart rate, SpO₂, Sleep</li>
+      <li>- iPhone and Siri Integration</li>
+      <li>- 100+ workout modes</li>
+      <li>- 10-day battery life, fast charging</li>
+      <li>- 5ATM water resistance</li>
+      <li>- Works with Apple ecosystem</li>
+    </ul>
+  </section>
 
-    <div class="product">
-      <img src="apple-vision-pro-2.png" alt="Vision Pro 2">
-      <h2>Apple Vision Pro 2</h2>
-      <p>The next generation of spatial computing. Lighter. Smarter. Sharper.</p>
-    </div>
+  <section>
+    <h2>Apple Hub mini</h2>
+    <p>Expand your iPhone’s possibilities.</p>
+    <img src="apple-hub-mini.png" alt="Apple Hub mini" />
+    <p>
+      The Apple Hub mini is the perfect companion for your iPhone. Connect external storage,
+      displays, keyboards and more — all through a sleek, lightweight device made for the Apple lifestyle.
+    </p>
+    <ul>
+      <li>- 1x USB-C PD charging port</li>
+      <li>- 2x USB-A 3.0 ports</li>
+      <li>- 1x HDMI output up to 4K</li>
+      <li>- SD and microSD card reader</li>
+      <li>- Made for iPhone & iPad (MFi certified)</li>
+      <li>- Compact & minimalistic design</li>
+    </ul>
+  </section>
 
-    <div class="product">
-      <img src="apple-fitband.png" alt="Apple FitBand">
-      <h2>Apple FitBand</h2>
-      <p>Track your health and fitness in style with OLED, Siri, and 10-day battery life.</p>
-    </div>
+  <section>
+    <h2>iPhone Ultra X</h2>
+    <p>The most powerful iPhone ever. Foldable. Futuristic. Ultra.</p>
+    <img src="iphone-ultra-x.png" alt="iPhone Ultra X" />
+    <p>
+      Introducing the first foldable iPhone with a seamless edge-to-edge display, powered by the Ultra A19 chip.
+      Designed for pros and dreamers.
+    </p>
+    <ul>
+      <li>- Foldable Retina XDR Pro Display</li>
+      <li>- Ultra A19 Bionic chip</li>
+      <li>- 48MP quad-camera system with LiDAR</li>
+      <li>- USB-C with Thunderbolt 4</li>
+      <li>- Always-On Dynamic Island</li>
+      <li>- Face ID under display</li>
+      <li>- iOS Ultra with new multitasking</li>
+    </ul>
+  </section>
 
-    <div class="product">
-      <img src="apple-hub-mini.png" alt="Apple Hub mini">
-      <h2>Apple Hub Mini</h2>
-      <p>Expand your iPhone’s potential with USB-C, HDMI, SD, and more.</p>
-    </div>
+  <section>
+    <h2>iPhone Flip</h2>
+    <p>The future of foldable smartphones. Compact. Elegant. Apple.</p>
+    <img src="iphone-flip.png" alt="iPhone Flip" />
+    <p>
+      iPhone Flip combines the iconic design of the iPhone with the innovation of foldable displays.
+      Featuring a vertical hinge, ultra-thin glass, and iOS Flip optimized for multitasking.
+    </p>
+    <ul>
+      <li>- 6.3" Foldable Super Retina XDR Display</li>
+      <li>- Flip A19 Fusion chip</li>
+      <li>- Dual 48MP cameras with Cinematic Mode</li>
+      <li>- MagSafe & Wireless Charging</li>
+      <li>- Cover screen for quick access</li>
+      <li>- Ultra-thin design with titanium hinge</li>
+      <li>- Optimized iOS Flip experience</li>
+    </ul>
+  </section>
 
-    <div class="product">
-      <img src="iphone-ultra-x.png" alt="iPhone Ultra X">
-      <h2>iPhone Ultra X</h2>
-      <p>The most powerful foldable iPhone ever. Designed for pros and dreamers.</p>
-    </div>
+  <footer>
+    &copy; 2025 Tomáš Loves Tech
+  </footer>
 
-    <div class="product">
-      <img src="iphone-flip.png" alt="iPhone Flip">
-      <h2>iPhone Flip</h2>
-      <p>The compact foldable iPhone. Elegant and future-ready with iOS Flip.</p>
-    </div>
-
-  </div>
-
-  <footer>&copy; 2025 Tomáš Loves Tech</footer>
+  <script>
+    const btn = document.getElementById('toggleViewBtn');
+    btn.addEventListener('click', () => {
+      document.body.classList.toggle('gallery-mode');
+      btn.textContent = document.body.classList.contains('gallery-mode')
+        ? 'Switch to Default View'
+        : 'Switch to Gallery View';
+    });
+  </script>
 </body>
 </html>
