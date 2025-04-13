@@ -78,9 +78,7 @@
   <img src="mac-portable.png" alt="Mac Portable M1" />
   <p>The new revolutionary Apple product created by Tomáš.</p>
 
-  <!-- Produkty (zkráceno pro ukázku) -->
-  <!-- ... další sekce jako VisionTV, FitBand atd. ... -->
-
+  <!-- Produkt: Apple USB Hub -->
   <section>
     <h2>Apple USB Hub</h2>
     <p>Compatible with MacBook, iPad, iPhone and entire Apple ecosystem.</p>
@@ -97,6 +95,7 @@
     </div>
   </section>
 
+  <!-- Produkt: Apple Real Glasses -->
   <section>
     <h2>Apple Real Glasses</h2>
     <p>Augmented Reality. Real Apple Experience.</p>
@@ -115,6 +114,7 @@
     &copy; 2025 Tomáš Loves Tech
   </footer>
 
+  <!-- Skripty -->
   <script>
     const btn = document.getElementById('toggleViewBtn');
     btn.addEventListener('click', () => {
@@ -123,13 +123,6 @@
         ? 'Switch to Default View'
         : 'Switch to Gallery View';
     });
-
-    function toggleSection(id, btn) {
-      const el = document.getElementById(id);
-      const isVisible = el.style.display === 'block';
-      el.style.display = isVisible ? 'none' : 'block';
-      btn.textContent = isVisible ? 'Read more' : 'Read less';
-    }
 
     function toggleUSBHub() {
       const more = document.getElementById("usbMore");
@@ -140,10 +133,10 @@
     }
 
     function toggleRealGlasses() {
-      const more = document.getElementById("realMore");
+      const realMore = document.getElementById("realMore");
       const btn = document.getElementById("readMoreRealBtn");
-      const isVisible = more.style.display === "block";
-      more.style.display = isVisible ? "none" : "block";
+      const isVisible = realMore.style.display === "block";
+      realMore.style.display = isVisible ? "none" : "block";
       btn.textContent = isVisible ? "Read more" : "Read less";
     }
   </script>
