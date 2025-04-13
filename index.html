@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Apple Concepts</title>
+  <title>My Apple Product Concepts</title>
   <style>
     body {
       font-family: sans-serif;
@@ -178,18 +178,19 @@
           "Multiplayer matchmaking and Apple Arcade integration",
           "Switch. Just switch."
         ]
+      },
+      {
+        name: "Apple GamePad",
+        img: "applegamepad.png",
+        desc: "Wireless controller designed for Apple gaming.",
+        details: [
+          "Integrated mini display",
+          "Haptic feedback and adaptive triggers",
+          "Compatible with iPhone, iPad, Mac, and Apple TV"
+        ]
       }
     ];
-{
-  name: "Apple GamePad",
-  img: "applegamepad.png",
-  desc: "Wireless controller designed for Apple gaming.",
-  details: [
-    "Integrated mini display",
-    "Haptic feedback and adaptive triggers",
-    "Compatible with iPhone, iPad, Mac, and Apple TV"
-  ]
-}
+
     const container = document.getElementById("product-container");
 
     products.forEach((product, index) => {
@@ -210,7 +211,7 @@
 
     function toggleDetails(index) {
       const detailDiv = document.getElementById(`details${index}`);
-      const button = document.querySelectorAll('button')[index + 1]; // první button je viewBtn
+      const button = document.querySelectorAll('button')[index];
       const isVisible = detailDiv.style.display === "block";
       detailDiv.style.display = isVisible ? "none" : "block";
       button.textContent = isVisible ? "Read more" : "Hide details";
