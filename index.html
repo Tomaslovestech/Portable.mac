@@ -1,180 +1,234 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Apple-Inspired Creations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Apple Creations</title>
   <style>
     body {
+      background-color: #000;
+      color: #fff;
       font-family: Arial, sans-serif;
-      background: #fff;
-      margin: 0;
-      padding: 20px;
       text-align: center;
+      padding: 40px;
     }
-    h1 {
-      font-size: 2em;
+    h1, h2 {
+      color: #ccc;
     }
-    .product {
-      margin: 30px auto;
-      max-width: 600px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 30px;
+    img {
+      width: 80%;
+      max-width: 500px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
-    .product img {
-      max-width: 100%;
-      border-radius: 16px;
+    p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 30px;
     }
-    .description {
-      display: none;
-      margin-top: 10px;
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
     }
-    button {
-      background-color: #0071e3;
-      color: white;
+    ul {
+      text-align: left;
+      display: inline-block;
+      margin: 0 auto 30px;
+      padding: 0;
+      list-style: none;
+    }
+    #toggleViewBtn {
+      background-color: #444;
+      color: #fff;
       border: none;
-      padding: 10px 16px;
-      margin-top: 10px;
-      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-bottom: 30px;
       cursor: pointer;
+      border-radius: 10px;
+    }
+    .gallery-mode section {
+      display: inline-block;
+      width: 300px;
+      vertical-align: top;
+      margin: 20px;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .gallery-mode img {
+      width: 100%;
+      max-width: none;
+      margin: 10px 0;
+    }
+    .gallery-mode p,
+    .gallery-mode ul {
+      text-align: left;
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
+  <h1>Welcome to My Apple Creations</h1>
+  <button id="toggleViewBtn">Switch to Gallery View</button>  <div id="productsContainer"></div>  <footer>
+    &copy; 2025 Tomáš Loves Tech
+  </footer>  <script>
+    const products = [
+      {
+        name: "Mac Portable M1",
+        img: "mac-portable.png",
+        desc: "The new revolutionary Apple product created by Tomáš.",
+        details: [
+          "M1 chip, fanless design",
+          "Touchscreen and keyboard included",
+          "Lightweight and portable"
+        ]
+      },
+      {
+        name: "VisionTV",
+        img: "visiontv1.png",
+        desc: "Apple smart TV concept.",
+        details: [
+          "4K OLED screen",
+          "Apple TV built-in",
+          "Siri voice control and AirPlay support"
+        ]
+      },
+      {
+        name: "Mac mini",
+        img: "visiontv2.png",
+        desc: "Compact and powerful desktop computer.",
+        details: [
+          "M1 chip",
+          "8GB RAM / 256GB SSD",
+          "Perfect for developers and creatives"
+        ]
+      },
+      {
+        name: "Apple Pencil",
+        img: "visiontv2.png",
+        desc: "Digital stylus for precision work.",
+        details: [
+          "Pressure and tilt sensitive",
+          "Works with iPad and VisionTV",
+          "Perfect for drawing and note-taking"
+        ]
+      },
+      {
+        name: "Apple FitBand",
+        img: "apple-fitband.png",
+        desc: "Fitness tracker with Apple ecosystem integration.",
+        details: [
+          "Heart rate and sleep monitor",
+          "OLED display",
+          "Connects to iPhone and iPad"
+        ]
+      },
+      {
+        name: "Magic Mouse Pro",
+        img: "visiontv2.png",
+        desc: "Advanced wireless mouse.",
+        details: [
+          "Multi-touch surface",
+          "Rechargeable battery",
+          "Optimized for macOS"
+        ]
+      },
+      {
+        name: "iPhone Ultra X",
+        img: "visiontv2.png",
+        desc: "Flagship iPhone concept.",
+        details: [
+          "6.9-inch display",
+          "A18 chip",
+          "Quad-camera system"
+        ]
+      },
+      {
+        name: "iPhone Flip",
+        img: "visiontv2.png",
+        desc: "Foldable iPhone with flexible display.",
+        details: [
+          "OLED foldable screen",
+          "MagSafe and Face ID",
+          "New iOS Flip UI"
+        ]
+      },
+      {
+        name: "iPad Pro Touch",
+        img: "visiontv2.png",
+        desc: "Interactive tablet experience.",
+        details: [
+          "12.9-inch Liquid Retina display",
+          "M2 chip",
+          "Pencil 3 support"
+        ]
+      },
+      {
+        name: "iPod Rewind",
+        img: "visiontv2.png",
+        desc: "Retro music player with modern tech.",
+        details: [
+          "Click wheel navigation",
+          "Bluetooth + WiFi",
+          "128GB storage"
+        ]
+      },
+      {
+        name: "Apple USB Hub",
+        img: "appleusbhub.png",
+        desc: "Compatible with the entire Apple ecosystem.",
+        details: [
+          "SD card reader",
+          "3x USB 3.0, 2x USB-C",
+          "HDMI output"
+        ]
+      },
+      {
+        name: "Apple Real Glasses",
+        img: "applereal.png",
+        desc: "Augmented Reality. Real Apple Experience.",
+        details: [
+          "Next-gen AR glasses",
+          "Lightweight and stylish",
+          "Perfect with iPhone, iPad and Mac"
+        ]
+      }
+    ];
 
-  <h1>Welcome to Mac Portable M1</h1>
-  <p>Reinvented. Reimagined. Remarkably Yours.</p>
-  <p>Think Handmade. The new revolutionary Apple product created by Tomáš.</p>
+    const container = document.getElementById('productsContainer');
 
-  <!-- VisionTV -->
-  <div class="product">
-    <h2>VisionTV</h2>
-    <img src="visiontv1.jpg" alt="VisionTV" />
-    <div class="description">
-      <p><strong>The Smart TV. Reimagined.</strong><br>
-      Touch. Voice. Ecosystem. Meet the future of television.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
+    products.forEach((product, index) => {
+      const section = document.createElement('section');
+      section.innerHTML = `
+        <h2>${product.name}</h2>
+        <p>${product.desc}</p>
+        <img src="${product.img}" alt="${product.name}" />
+        <button onclick="toggleDetails(${index})" id="btn${index}">Read more</button>
+        <div id="details${index}" style="display: none;">
+          <ul>${product.details.map(detail => `<li>${detail}</li>`).join('')}</ul>
+        </div>
+      `;
+      container.appendChild(section);
+    });
 
-  <!-- Mac Portable M1 -->
-  <div class="product">
-    <h2>Mac Portable M1</h2>
-    <img src="mac-portable.png" alt="Mac Portable M1" />
-    <div class="description">
-      <p>Power of the M1 chip in a handmade compact design. Portable. Capable. Yours.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
-
-  <!-- Mac mini -->
-  <div class="product">
-    <h2>Mac mini</h2>
-    <img src="visiontv2.jpg" alt="Mac mini" />
-    <div class="description">
-      <p>The compact desktop computer reimagined. Handmade M1 performance. A new take on minimalism.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
-
-  <!-- Apple Pencil -->
-  <div class="product">
-    <h2>Apple Pencil</h2>
-    <img src="visiontv2.jpg" alt="Apple Pencil" />
-    <div class="description">
-      <p>Precision and performance. Draw, write, and create with total control – in handmade Apple style.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
-
-  <!-- Apple FitBand -->
-  <div class="product">
-    <h2>Apple FitBand</h2>
-    <img src="applefitband.png" alt="Apple FitBand" />
-    <div class="description">
-      <p>Stay fit with style. Inspired by Amazfit Band 5, made for the Apple ecosystem. Heart rate, steps, sleep – right on your wrist.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
-
-  <!-- Magic Mouse Pro -->
-  <div class="product">
-    <h2>Magic Mouse Pro</h2>
-    <img src="visiontv2.jpg" alt="Magic Mouse Pro" />
-    <div class="description">
-      <p>Next-level input. Ergonomic, responsive, and crafted for professionals.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
-
-  <!-- iPhone Ultra X -->
-  <div class="product">
-    <h2>iPhone Ultra X</h2>
-    <img src="visiontv2.jpg" alt="iPhone Ultra X" />
-    <div class="description">
-      <p>Power meets elegance. The future of iPhone – Ultra performance, X design.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
-
-  <!-- iPhone Flip -->
-  <div class="product">
-    <h2>iPhone Flip</h2>
-    <img src="visiontv2.jpg" alt="iPhone Flip" />
-    <div class="description">
-      <p>The first foldable iPhone. Innovation, flexibility, and iconic Apple style combined.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
-
-  <!-- iPad Pro Touch -->
-  <div class="product">
-    <h2>iPad Pro Touch</h2>
-    <img src="visiontv2.jpg" alt="iPad Pro Touch" />
-    <div class="description">
-      <p>Touch the future of productivity. The most advanced iPad with even more control.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
-
-  <!-- iPod Rewind -->
-  <div class="product">
-    <h2>iPod Rewind</h2>
-    <img src="visiontv2.jpg" alt="iPod Rewind" />
-    <div class="description">
-      <p>Classic returns. A retro-inspired iPod with modern audio magic.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
-
-  <!-- Apple USB Hub -->
-  <div class="product">
-    <h2>Apple USB Hub</h2>
-    <img src="appleusbhub.png" alt="Apple USB Hub" />
-    <div class="description">
-      <p>Compatible with MacBook, iPad, iPhone and entire Apple ecosystem. Hub contains SD card reader, 3x USB 3.0, 2x USB-C, HDMI.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
-
-  <!-- Apple Real Glasses -->
-  <div class="product">
-    <h2>Apple Real Glasses</h2>
-    <img src="applereal.png" alt="Apple Real Glasses" />
-    <div class="description">
-      <p>Augmented reality like never before. AR glasses that fit seamlessly into your Apple world.</p>
-    </div>
-    <button onclick="toggleDescription(this)">Read more</button>
-  </div>
-
-  <script>
-    function toggleDescription(button) {
-      const desc = button.previousElementSibling;
-      const isVisible = desc.style.display === 'block';
-      desc.style.display = isVisible ? 'none' : 'block';
-      button.textContent = isVisible ? 'Read more' : 'Read less';
+    function toggleDetails(index) {
+      const detailDiv = document.getElementById(`details${index}`);
+      const button = document.getElementById(`btn${index}`);
+      const isVisible = detailDiv.style.display === "block";
+      detailDiv.style.display = isVisible ? "none" : "block";
+      button.textContent = isVisible ? "Read more" : "Read less";
     }
-  </script>
 
-</body>
+    const viewBtn = document.getElementById('toggleViewBtn');
+    viewBtn.addEventListener('click', () => {
+      document.body.classList.toggle('gallery-mode');
+      viewBtn.textContent = document.body.classList.contains('gallery-mode')
+        ? 'Switch to Default View'
+        : 'Switch to Gallery View';
+    });
+  </script></body>
 </html>
