@@ -1,84 +1,42 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Apple Creations</title>
+  <meta charset="UTF-8">
+  <title>My Apple Concepts</title>
   <style>
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
+      font-family: sans-serif;
+      padding: 20px;
     }
-    h1, h2 {
-      color: #ccc;
+    section {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      padding: 15px;
+      max-width: 600px;
     }
     img {
-      width: 80%;
-      max-width: 500px;
-      margin: 20px auto;
       display: block;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      margin-top: 10px;
     }
-    p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto 30px;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #888;
-    }
-    ul {
-      text-align: left;
-      display: inline-block;
-      margin: 0 auto 30px;
-      padding: 0;
-      list-style: none;
-    }
-    #toggleViewBtn {
-      background-color: #444;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-bottom: 30px;
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
       cursor: pointer;
-      border-radius: 10px;
     }
-    .gallery-mode section {
+    .gallery section {
       display: inline-block;
       width: 300px;
       vertical-align: top;
-      margin: 20px;
-      background-color: #111;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-    }
-    .gallery-mode img {
-      width: 100%;
-      max-width: none;
-      margin: 10px 0;
-    }
-    .gallery-mode p,
-    .gallery-mode ul {
-      text-align: left;
-      margin: 10px 0;
+      margin-right: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to My Apple Creations</h1>
-  <button id="toggleViewBtn">Switch to Gallery View</button>
-  <div id="productsContainer"></div>
-  <footer>
-    &copy; 2025 Tomáš Loves Tech
-  </footer>
+
+  <h1>My Apple Product Concepts</h1>
+  <button id="viewBtn">Toggle Gallery View</button>
+  <div id="product-container"></div>
 
   <script>
     const products = [
@@ -107,8 +65,7 @@
         img: "mac-mini.png",
         desc: "Compact and powerful desktop computer.",
         details: [
-          "M1 chip",
-          "8GB RAM / 256GB SSD",
+          "M1 Chip with 8GB RAM / 256GB SSD",
           "Perfect for developers and creatives"
         ]
       },
@@ -164,17 +121,17 @@
       },
       {
         name: "iPad Pro Touch",
-        img: "ipadtouchpro.png",
+        img: "ipadprotouch.png",
         desc: "Interactive tablet experience.",
         details: [
           "12.9-inch Liquid Retina display",
-          "M2 chip",
+          "M2 Chip",
           "Pencil 3 support"
         ]
       },
       {
         name: "iPod Rewind",
-        img: "iPodrewind-iPadtouchpro-iponefold.png",
+        img: "ipodrewind-ipadtouchpro-iponefold.png",
         desc: "Retro music player with modern tech.",
         details: [
           "Click wheel navigation",
@@ -195,7 +152,7 @@
       {
         name: "Apple Real Glasses",
         img: "applereal.png",
-        desc: "Augmented Reality. Real Apple Experience.",
+        desc: "Augmented Reality, Real Apple Experience.",
         details: [
           "Next-gen AR glasses",
           "Lightweight and stylish",
@@ -211,20 +168,32 @@
           "M5 Max – Designed for professionals with up to 12-core CPU and 30-core GPU",
           "M5 Ultra – The ultimate chip for extreme performance and multitasking"
         ]
+      },
+      {
+        name: "Apple iGames",
+        img: "AppleGaminghub.png",
+        desc: "Game. Connect. Compete. The future of Apple gaming.",
+        details: [
+          "Next-gen gaming hub for iPhone, iPad, Mac and Apple TV",
+          "Multiplayer matchmaking and Apple Arcade integration",
+          "Switch. Just switch."
+        ]
       }
     ];
 
-    const container = document.getElementById('productsContainer');
+    const container = document.getElementById("product-container");
 
     products.forEach((product, index) => {
-      const section = document.createElement('section');
+      const section = document.createElement("section");
       section.innerHTML = `
         <h2>${product.name}</h2>
         <p>${product.desc}</p>
-        ${product.img ? `<img src="${product.img}" alt="${product.name}" />` : ""}
-        <button onclick="toggleDetails(${index})" id="btn${index}">Read more</button>
+        ${product.img ? `<img src="${product.img}" alt="${product.name}" style="max-width: 300px;">` : ""}
+        <button onclick="toggleDetails(${index})">Read more</button>
         <div id="details${index}" style="display: none;">
-          <ul>${product.details.map(detail => `<li>${detail}</li>`).join('')}</ul>
+          <ul>
+            ${product.details.map(detail => `<li>${detail}</li>`).join('')}
+          </ul>
         </div>
       `;
       container.appendChild(section);
@@ -232,19 +201,17 @@
 
     function toggleDetails(index) {
       const detailDiv = document.getElementById(`details${index}`);
-      const button = document.getElementById(`btn${index}`);
+      const button = document.querySelectorAll('button')[index + 1]; // první button je viewBtn
       const isVisible = detailDiv.style.display === "block";
       detailDiv.style.display = isVisible ? "none" : "block";
-      button.textContent = isVisible ? "Read more" : "Read less";
+      button.textContent = isVisible ? "Read more" : "Hide details";
     }
 
-    const viewBtn = document.getElementById('toggleViewBtn');
-    viewBtn.addEventListener('click', () => {
-      document.body.classList.toggle('gallery-mode');
-      viewBtn.textContent = document.body.classList.contains('gallery-mode')
-        ? 'Switch to Default View'
-        : 'Switch to Gallery View';
+    const viewBtn = document.getElementById("viewBtn");
+    viewBtn.addEventListener("click", () => {
+      document.body.classList.toggle("gallery");
     });
   </script>
+
 </body>
 </html>
