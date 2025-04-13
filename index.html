@@ -1,252 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Apple Creations</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
-    }
-    h1, h2 {
-      color: #ccc;
-    }
-    img {
-      width: 80%;
-      max-width: 500px;
-      margin: 20px auto;
-      display: block;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    }
-    p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto 30px;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #888;
-    }
-    ul {
-      text-align: left;
-      display: inline-block;
-      margin: 0 auto 30px;
-      padding: 0;
-      list-style: none;
-    }
-    #toggleViewBtn {
-      background-color: #444;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      margin-bottom: 30px;
-      cursor: pointer;
-      border-radius: 10px;
-    }
-    .gallery-mode section {
-      display: inline-block;
-      width: 300px;
-      vertical-align: top;
-      margin: 20px;
-      background-color: #111;
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-    }
-    .gallery-mode img {
-      width: 100%;
-      max-width: none;
-      margin: 10px 0;
-    }
-    .gallery-mode p,
-    .gallery-mode ul {
-      text-align: left;
-      margin: 10px 0;
-    }
-  </style>
-</head>
-<body>
-  <h1>Welcome to My Apple Creations</h1>
-  <button id="toggleViewBtn">Switch to Gallery View</button>
-  <div id="productsContainer"></div>
-  <footer>
-    &copy; 2025 Tomáš Loves Tech
-  </footer>
-
-  <script>
-    const products = [
-      {
-        name: "Mac Portable M1",
-        img: "mac-portable.png",
-        desc: "The new revolutionary Apple product created by Tomáš.",
-        details: [
-          "M1 chip, fanless design",
-          "Touchscreen and keyboard included",
-          "Lightweight and portable"
-        ]
-      },
-      {
-        name: "VisionTV",
-        img: "apple-visiontv1.png",
-        desc: "Apple smart TV concept.",
-        details: [
-          "4K OLED screen",
-          "Apple TV built-in",
-          "Siri voice control and AirPlay support"
-        ]
-      },
-      {
-        name: "Mac mini",
-        img: "mac-mini.png",
-        desc: "Compact and powerful desktop computer.",
-        details: [
-          "M1 chip",
-          "8GB RAM / 256GB SSD",
-          "Perfect for developers and creatives"
-        ]
-      },
-      {
-        name: "Apple Pencil",
-        img: "applepencil.png",
-        desc: "Digital stylus for precision work.",
-        details: [
-          "Pressure and tilt sensitive",
-          "Works with iPad and VisionTV",
-          "Perfect for drawing and note-taking"
-        ]
-      },
-      {
-        name: "Apple FitBand",
-        img: "apple-fitband.png",
-        desc: "Fitness tracker with Apple ecosystem integration.",
-        details: [
-          "Heart rate and sleep monitor",
-          "OLED display",
-          "Connects to iPhone and iPad"
-        ]
-      },
-      {
-        name: "Magic Mouse Pro",
-        img: "magicmousepro.png",
-        desc: "Advanced wireless mouse.",
-        details: [
-          "Multi-touch surface",
-          "Rechargeable battery",
-          "Optimized for macOS"
-        ]
-      },
-      {
-        name: "iPhone Ultra X",
-        img: "iphone-ultra-x.png",
-        desc: "Flagship iPhone concept.",
-        details: [
-          "6.9-inch display",
-          "A18 chip",
-          "Quad-camera system"
-        ]
-      },
-      {
-        name: "iPhone Flip",
-        img: "iphone-flip.png",
-        desc: "Foldable iPhone with flexible display.",
-        details: [
-          "OLED foldable screen",
-          "MagSafe and Face ID",
-          "New iOS Flip UI"
-        ]
-      },
-      {
-        name: "iPad Pro Touch",
-        desc: "Interactive tablet experience.",
-        details: [
-          "12.9-inch Liquid Retina display",
-          "M2 chip",
-          "Pencil 3 support"
-        ]
-      },
-      {
-        name: "iPod Rewind",
-        img: "iPodrewind-iPadtouchpro-iponefold.png",
-        desc: "Retro music player with modern tech.",
-        details: [
-          "Click wheel navigation",
-          "Bluetooth + WiFi",
-          "128GB storage"
-        ]
-      },
-      {
-        name: "Apple USB Hub",
-        img: "appleusbhub.png",
-        desc: "Compatible with the entire Apple ecosystem.",
-        details: [
-          "SD card reader",
-          "3x USB 3.0, 2x USB-C",
-          "HDMI output"
-        ]
-      },
-      {
-        name: "Apple Real Glasses",
-        img: "applereal.png",
-        desc: "Augmented Reality. Real Apple Experience.",
-        details: [
-          "Next-gen AR glasses",
-          "Lightweight and stylish",
-          "Perfect with iPhone, iPad and Mac"
-        ]
-      }
-    ];
-{
-  name
-  ]
-}
-{
-  name: "Apple M5 Series",
-  img: "M5processors.png",
-  desc: "Next generation of Apple Silicon chips.",
-  details: [
-    "Apple M5 – Blazing fast 3nm performance",
-    "M5 Max – Designed for professionals with up to 12-core CPU and 30-core GPU",
-    "M5 Ultra – The ultimate chip for extreme performance and multitasking"
-  ]
-},
-    const container = document.getElementById('productsContainer');
-
-    products.forEach((product, index) => {
-      const section = document.createElement('section');
-      section.innerHTML = `
-        <h2>${product.name}</h2>
-        <p>${product.desc}</p>
-        <img src="${product.img}" alt="${product.name}" />
-        <button onclick="toggleDetails(${index})" id="btn${index}">Read more</button>
-        <div id="details${index}" style="display: none;">
-          <ul>${product.details.map(detail => `<li>${detail}</li>`).join('')}</ul>
-        </div>
-      `;
-      container.appendChild(section);
-    });
-
-    function toggleDetails(index) {
-      const detailDiv = document.getElementById(`details${index}`);
-      const button = document.getElementById(`btn${index}`);
-      const isVisible = detailDiv.style.display === "block";
-      detailDiv.style.display = isVisible ? "none" : "block";
-      button.textContent = isVisible ? "Read more" : "Read less";
-    }
-
-    const viewBtn = document.getElementById('toggleViewBtn');
-    viewBtn.addEventListener('click', () => {
-      document.body.classList.toggle('gallery-mode');
-      viewBtn.textContent = document.body.classList.contains('gallery-mode')
-        ? 'Switch to Default View'
-        : 'Switch to Gallery View';
-    });
-  </script>
-</body>
-</html>
+ const products = [
+  {
+    name: "Mac Portable M1",
+    img: "mac-portable.png",
+    desc: "The new revolutionary Apple product created by Tomáš.",
+    details: [
+      "M1 chip, fanless design",
+      "Touchscreen and keyboard included",
+      "Lightweight and portable"
+    ]
+  },
+  {
+    name: "VisionTV",
+    img: "apple-visiontv1.png",
+    desc: "Apple smart TV concept.",
+    details: [
+      "4K OLED screen",
+      "Apple TV built-in",
+      "Siri voice control and AirPlay support"
+    ]
+  },
+  {
+    name: "Mac mini",
+    img: "mac-mini.png",
+    desc: "Compact and powerful desktop computer.",
+    details: [
+      "M1 chip",
+      "8GB RAM / 256GB SSD",
+      "Perfect for developers and creatives"
+    ]
+  },
+  {
+    name: "Apple Pencil",
+    img: "applepencil.png",
+    desc: "Digital stylus for precision work.",
+    details: [
+      "Pressure and tilt sensitive",
+      "Works with iPad and VisionTV",
+      "Perfect for drawing and note-taking"
+    ]
+  },
+  {
+    name: "Apple FitBand",
+    img: "apple-fitband.png",
+    desc: "Fitness tracker with Apple ecosystem integration.",
+    details: [
+      "Heart rate and sleep monitor",
+      "OLED display",
+      "Connects to iPhone and iPad"
+    ]
+  },
+  {
+    name: "Magic Mouse Pro",
+    img: "magicmousepro.png",
+    desc: "Advanced wireless mouse.",
+    details: [
+      "Multi-touch surface",
+      "Rechargeable battery",
+      "Optimized for macOS"
+    ]
+  },
+  {
+    name: "iPhone Ultra X",
+    img: "iphone-ultra-x.png",
+    desc: "Flagship iPhone concept.",
+    details: [
+      "6.9-inch display",
+      "A18 chip",
+      "Quad-camera system"
+    ]
+  },
+  {
+    name: "iPhone Flip",
+    img: "iphone-flip.png",
+    desc: "Foldable iPhone with flexible display.",
+    details: [
+      "OLED foldable screen",
+      "MagSafe and Face ID",
+      "New iOS Flip UI"
+    ]
+  },
+  {
+    name: "iPad Pro Touch",
+    img: "ipadtouchpro.png",
+    desc: "Interactive tablet experience.",
+    details: [
+      "12.9-inch Liquid Retina display",
+      "M2 chip",
+      "Pencil 3 support"
+    ]
+  },
+  {
+    name: "iPod Rewind",
+    img: "iPodrewind-iPadtouchpro-iponefold.png",
+    desc: "Retro music player with modern tech.",
+    details: [
+      "Click wheel navigation",
+      "Bluetooth + WiFi",
+      "128GB storage"
+    ]
+  },
+  {
+    name: "Apple USB Hub",
+    img: "appleusbhub.png",
+    desc: "Compatible with the entire Apple ecosystem.",
+    details: [
+      "SD card reader",
+      "3x USB 3.0, 2x USB-C",
+      "HDMI output"
+    ]
+  },
+  {
+    name: "Apple Real Glasses",
+    img: "applereal.png",
+    desc: "Augmented Reality. Real Apple Experience.",
+    details: [
+      "Next-gen AR glasses",
+      "Lightweight and stylish",
+      "Perfect with iPhone, iPad and Mac"
+    ]
+  },
+  {
+    name: "Apple M5 Series",
+    img: "M5processors.png",
+    desc: "Next generation of Apple Silicon chips.",
+    details: [
+      "Apple M5 – Blazing fast 3nm performance",
+      "M5 Max – Designed for professionals with up to 12-core CPU and 30-core GPU",
+      "M5 Ultra – The ultimate chip for extreme performance and multitasking"
+    ]
+  }
+];
