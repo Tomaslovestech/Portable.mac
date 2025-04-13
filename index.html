@@ -1,162 +1,125 @@
- <!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Apple Concepts</title>
+  <title>My Apple-Inspired Projects</title>
   <style>
     body {
-      background-color: #111;
-      color: #ddd;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
       padding: 20px;
+      text-align: center;
     }
     .product {
-      background: #222;
-      padding: 15px;
-      margin-bottom: 20px;
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
       border-radius: 10px;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .product img {
       width: 100%;
-      max-width: 400px;
+      max-width: 500px;
       display: block;
-      margin-bottom: 10px;
+      margin: 0 auto 15px;
+      border-radius: 8px;
     }
     .product h2 {
-      margin-top: 0;
+      text-align: center;
+    }
+    .product p {
+      text-align: center;
     }
   </style>
 </head>
-<body>
-  <h1>My Apple Concepts</h1>
-  <div id="product-container"></div>
-
-  <script>
-    const products = [
-      {
-        name: "Mac Portable M1",
-        img: "mac-portable.png",
-        desc: "A lightweight and stylish portable Mac concept with M1 chip.",
-        details: ["13-inch Retina Display", "Apple M1 chip", "8GB RAM, 256GB SSD"]
-      },
-      {
-        name: "Apple Pencil Touch",
-        img: "visiontv1.jpg",
-        desc: "A new generation Apple Pencil with touch gestures and haptic feedback.",
-        details: ["Precision drawing", "Touch-sensitive body", "USB-C charging"]
-      },
-      {
-        name: "Apple VisionTV",
-        img: "visiontv2.jpg",
-        desc: "Next-gen Apple smart TV with visionOS and seamless Apple integration.",
-        details: ["8K Display", "visionOS built-in", "Apple Arcade & Fitness+ support"]
-      },
-      {
-        name: "Apple FitBand",
-        img: "apple-fitband.png",
-        desc: "Fitness band concept inspired by Amazfit Band 5, with deep Apple Health integration.",
-        details: ["Heart Rate & SpO2 monitoring", "Sleep Tracking", "Syncs with iPhone & Apple Watch"]
-      },
-      {
-        name: "Apple USB Hub",
-        img: "appleusbhub.png",
-        desc: "Compatible with MacBook, iPad, iPhone and entire Apple ecosystem. Hub contains SD card reader, 3x USB 3.0, 2x USB-C, HDMI.",
-        details: ["3x USB 3.0 ports", "2x USB-C ports", "HDMI & SD card reader"]
-      },
-      {
-        name: "Apple Real Glasses",
-        img: "applereal.png",
-        desc: "AR smart glasses that connect to your iPhone, iPad and Mac seamlessly.",
-        details: ["Augmented Reality experience", "Apple ecosystem integration", "Lightweight and stylish"]
-      },
-      {
-        name: "Magic Mouse Pro",
-        img: "magicmouse.png",
-        desc: "A redesigned Magic Mouse for professionals with extra gesture support.",
-        details: ["Multi-touch gestures", "Ergonomic shape", "Bluetooth & USB-C"]
-      },
-      {
-        name: "iPhone Ultra X",
-        img: "iphoneultrax.png",
-        desc: "The next-generation iPhone concept with futuristic design.",
-        details: ["Dynamic Island Pro", "Quad camera system", "Titanium body"]
-      },
-      {
-        name: "iPhone Flip",
-        img: "iphoneflip.png",
-        desc: "Foldable iPhone concept to compete with Galaxy Z Flip.",
-        details: ["Flexible OLED Display", "Compact form", "Magsafe support"]
-      },
-      {
-        name: "iPad Pro Touch",
-        img: "ipadprotouch.png",
-        desc: "Next-gen iPad Pro with full surface touch interaction.",
-        details: ["M3 chip", "Edge-to-edge touch", "Apple Pencil Pro compatible"]
-      },
-      {
-        name: "iPod Rewind",
-        img: "ipodrewind.png",
-        desc: "A retro-modern iPod concept inspired by the original click wheel design.",
-        details: ["Click Wheel interface", "Apple Music offline", "Bluetooth headphones support"]
-      },
-      {
-        name: "Apple NAS",
-        img: "applenas.png",
-        desc: "High-capacity network storage for your Apple devices.",
-        details: ["Supports up to 120TB of storage", "Time Machine & iCloud backup compatible", "Remote access from iPhone, iPad, Mac"]
-      },
-      {
-        name: "Apple iGames",
-        img: "AppleGaminghub.png",
-        desc: "Apple's ultimate cloud gaming platform for all Apple devices.",
-        details: ["Play anywhere on iPhone, iPad, Mac, Apple TV", "Cloud-based save & progress", "Apple Arcade, GamePad & VisionOS support"]
-      },
-      {
-        name: "Apple GamePad",
-        img: "applegamepad.png",
-        desc: "Wireless controller designed for Apple iGames and Arcade.",
-        details: ["Bluetooth connectivity", "Haptic feedback", "Compatible with iPhone, iPad, Mac"]
-      }
-    ];<div class="product">
+<body><header>
+  <h1>My Apple-Inspired Products</h1>
+</header><!-- PRODUCT SECTION START --><div class="product">
+  <img src="mac-portable.png" alt="Mac Portable M1">
+  <h2>Mac Portable M1</h2>
+  <p>Reimagined portable Mac with M1 chip and compact retro design.</p>
+</div><div class="product">
+  <img src="apple-fitband.png" alt="Apple FitBand">
+  <h2>Apple FitBand</h2>
+  <p>Smart fitness band inspired by Apple Watch and Amazfit Band 5.</p>
+</div><div class="product">
+  <img src="visiontv1.jpg" alt="Apple VisionTV 1">
+  <h2>Apple VisionTV 1</h2>
+  <p>Smart Apple TV with built-in screen, stylish minimalist design.</p>
+</div><div class="product">
+  <img src="visiontv2.jpg" alt="Apple VisionTV 2">
+  <h2>Apple VisionTV 2</h2>
+  <p>Second-gen Apple VisionTV with improved display and audio.</p>
+</div><div class="product">
+  <img src="appleusbhub.png" alt="Apple USB Hub">
+  <h2>Apple USB Hub</h2>
+  <p>Compatible with MacBook, iPad, iPhone and entire Apple ecosystem. Hub contains SD card reader, 3x USB 3.0, 2x USB-C, HDMI.</p>
+</div><div class="product">
+  <img src="applereal.png" alt="Apple Real Glasses">
+  <h2>Apple Real Glasses</h2>
+  <p>Augmented reality glasses that connect seamlessly with iPhone and iPad.</p>
+</div><div class="product">
+  <img src="AppleGaminghub.png" alt="Apple iGames">
+  <h2>Apple iGames</h2>
+  <p>Apple's own gaming platform, offering exclusive titles and seamless integration with Apple devices.</p>
+</div><div class="product">
+  <img src="applegamepad.png" alt="Apple GamePad">
+  <h2>Apple GamePad</h2>
+  <p>Wireless game controller optimized for Apple Arcade and iOS/macOS gaming.</p>
+</div><div class="product">
   <img src="imacprox.png" alt="iMac Pro X">
   <h2>iMac Pro X</h2>
-  <p>The most powerful iMac ever.</p>
-  <ul>
-    <li>Apple M5 Ultra chip</li>
-    <li>32" 8K Retina XDR display</li>
-    <li>Up to 128 GB unified memory</li>
-    <li>Designed for professionals and creatives</li>
-  </ul>
-</div>
-
-<div class="product">
-  <img src="macproductivebeast.png" alt="Mac Productive Beast">
+  <p>Powerful all-in-one desktop with M5 chip and edge-to-edge Retina display.</p>
+</div><div class="product">
+  <img src="productivebeast.png" alt="Mac Productive Beast">
   <h2>Mac Productive Beast</h2>
-  <p>When multitasking meets power.</p>
-  <ul>
-    <li>Dual-screen desktop workstation</li>
-    <li>M5 Max chip</li>
-    <li>Modular upgrade options</li>
-    <li>Designed for productivity and performance</li>
-  </ul>
+  <p>Ultimate productivity machine with M5 Ultra chip and up to 128 GB RAM.</p>
+</div><div class="product">
+  <img src="macmini.png" alt="Mac mini (Cardboard Model)">
+  <h2>Mac mini Cardboard Edition</h2>
+  <p>Crafted from cardboard, this model showcases a compact and creative take on the Mac mini.</p>
+</div><div class="product">
+  <img src="iphoneultrax.png" alt="iPhone Ultra X">
+  <h2>iPhone Ultra X</h2>
+  <p>Concept iPhone with edge-to-edge design, ultra-performance chip, and futuristic look.</p>
+</div><div class="product">
+  <img src="iphoneflip.png" alt="iPhone Flip">
+  <h2>iPhone Flip</h2>
+  <p>Foldable iPhone with dual-screen support and compact design for portability.</p>
+</div><div class="product">
+  <img src="ipadprotouch.png" alt="iPad Pro Touch">
+  <h2>iPad Pro Touch</h2>
+  <p>iPad with improved multi-touch capabilities and stylus support.</p>
+</div><div class="product">
+  <img src="ipodrewind.png" alt="iPod Rewind">
+  <h2>iPod Rewind</h2>
+  <p>Retro iPod with modern tech — USB-C, Bluetooth and Apple Music support.</p>
+</div><div class="product">
+  <img src="macbookairduo.png" alt="MacBook Air Duo">
+  <h2>MacBook Air Duo</h2>
+  <p>Dual-screen foldable MacBook for next-generation multitasking.</p>
+</div><div class="product">
+  <img src="applenas.png" alt="Apple NAS">
+  <h2>Apple NAS</h2>
+  <p>Network storage solution with up to 120TB, optimized for Time Machine and iCloud sync.</p>
+</div><div class="product">
+  <img src="appledualpower.png" alt="Apple DualPower">
+  <h2>Apple DualPower</h2>
+  <p>Dual-port charging adapter supporting MagSafe and USB-C fast charging.</p>
+</div><div class="product">
+  <img src="appleairtagspro.png" alt="Apple AirTags Pro">
+  <h2>Apple AirTags Pro</h2>
+  <p>Advanced location tracking with built-in speaker and rechargeable battery.</p>
+</div><div class="product">
+  <h2>Apple M5 / M5 Max / M5 Ultra</h2>
+  <p>Next-generation Apple Silicon chips with blazing-fast performance and efficiency.</p>
 </div>
-
-    const container = document.getElementById("product-container");
-
-    products.forEach(product => {
-      const div = document.createElement("div");
-      div.className = "product";
-
-      div.innerHTML = `
-        <img src="${product.img}" alt="${product.name}">
-        <h2>${product.name}</h2>
-        <p>${product.desc}</p>
-        <ul>${product.details.map(d => `<li>${d}</li>`).join("")}</ul>
-      `;
-
-      container.appendChild(div);
-    });
-  </script>
-</body>
-</html>
+<!-- PRODUCT SECTION END --></body>
+  </html>
