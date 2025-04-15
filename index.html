@@ -1,75 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tech Concepts – All Products</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tech Concepts</title>
   <style>
     body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+    }
+
+    header {
       background-color: #121212;
-      color: #fff;
-      font-family: Arial, sans-serif;
+      padding: 20px;
       text-align: center;
     }
+
+    h1 {
+      font-size: 32px;
+    }
+
     .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
       padding: 20px;
     }
+
     .product {
       background-color: #1e1e1e;
       border-radius: 10px;
       padding: 15px;
-      width: 220px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 300px;
+      box-sizing: border-box;
+      transition: transform 0.2s;
     }
+
+    .product:hover {
+      transform: scale(1.03);
+    }
+
     .product img {
-      width: 200px;
+      width: 100%;
       height: auto;
-      border-radius: 5px;
+      max-height: 200px;
+      object-fit: contain;
+      border-radius: 6px;
     }
+
     .product-name {
       margin-top: 10px;
       font-weight: bold;
       font-size: 16px;
+      word-wrap: break-word;
+    }
+
+    @media (max-width: 600px) {
+      .product {
+        min-height: 250px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>All Tech Concepts</h1>
+  <header>
+    <h1>Tech Concepts</h1>
+  </header>
+
   <div class="container">
-    <!-- PRODUCTS START -->
-    <div class="product"><img src="appleetherport.png"><div class="product-name">Apple Etherport</div></div>
-    <div class="product"><img src="applefs2024.png"><div class="product-name">Apple Flight Sim 2024</div></div>
-    <div class="product"><img src="applegamepad.png"><div class="product-name">Apple GamePad</div></div>
-    <div class="product"><img src="applehomeassitant.png"><div class="product-name">Apple Home Assistant</div></div>
-    <div class="product"><img src="appleigames.png"><div class="product-name">Apple iGames</div></div>
-    <div class="product"><img src="appleiwork.png"><div class="product-name">Apple iWork</div></div>
-    <div class="product"><img src="OIP.jpeg"><div class="product-name">Apple MacBook Duo</div></div>
-    <div class="product"><img src="applemagiccharger.png"><div class="product-name">Apple Magic Charger</div></div>
-    <div class="product"><img src="applepencil.png"><div class="product-name">Apple Pencil</div></div>
-    <div class="product"><img src="applepowerbank.png"><div class="product-name">Apple PowerBank</div></div>
-    <div class="product"><img src="appleprinter.png"><div class="product-name">Apple Printer</div></div>
-    <div class="product"><img src="appleread.png"><div class="product-name">Apple Read</div></div>
-    <div class="product"><img src="applereal.png"><div class="product-name">Apple Real Glasses</div></div>
-    <div class="product"><img src="applesmartcoverpro.png"><div class="product-name">Apple SmartCover Pro</div></div>
-    <div class="product"><img src="appleusbhub.png"><div class="product-name">Apple USB Hub</div></div>
-    <div class="product"><img src="applevisiontv2.png"><div class="product-name">Apple VisionTV 2</div></div>
-    <div class="product"><img src="iPodrewind.png"><div class="product-name">iPod Rewind</div></div>
-    <div class="product"><img src="inote.png"><div class="product-name">iNote</div></div>
-    <div class="product"><img src="iphone-flip.png"><div class="product-name">iPhone Flip</div></div>
-    <div class="product"><img src="iphone-ultra-x.png"><div class="product-name">iPhone Ultra X</div></div>
-    <div class="product"><img src="iphoneminis.png"><div class="product-name">iPhone Minis</div></div>
-    <div class="product"><img src="iphonepulse.png"><div class="product-name">iPhone Pulse</div></div>
-    <div class="product"><img src="iplanner.png"><div class="product-name">iPlanner</div></div>
-    <div class="product"><img src="iradio.png"><div class="product-name">iRadio</div></div>
-    <div class="product"><img src="mac-mini.png"><div class="product-name">Mac Mini</div></div>
-    <div class="product"><img src="mac-portable.png"><div class="product-name">Mac Portable</div></div>
-    <div class="product"><img src="applemacbookdual.png<div> class="product-name">MacBook Air Duo</div></div>
-    <div class="product"><img src="magicboardpro.png"><div class="product-name">Magic Board Pro</div></div>
-    <div class="product"><img src="magicmousepro.png"><div class="product-name">Magic Mouse Pro</div></div>
-    <div class="product"><img src="studiodisplayx.png"><div class="product-name">Studio Display</div></div>
-    <!-- PRODUCTS END -->
+    <div class="product">
+      <img src="visiontv2.jpg" alt="Apple VisionTV 2">
+      <div class="product-name">Apple VisionTV 2</div>
+    </div>
+    <div class="product">
+      <img src="ipod-rewind.png" alt="iPod Rewind">
+      <div class="product-name">iPod Rewind</div>
+    </div>
+    <div class="product">
+      <img src="inote.png" alt="iNote">
+      <div class="product-name">iNote</div>
+    </div>
+    <div class="product">
+      <img src="iphoneflip.png" alt="iPhone Flip">
+      <div class="product-name">iPhone Flip</div>
+    </div>
+    <div class="product">
+      <img src="iphoneultrax.png" alt="iPhone Ultra X">
+      <div class="product-name">iPhone Ultra X</div>
+    </div>
+    <div class="product">
+      <img src="iphoneminis.png" alt="iPhone Minis">
+      <div class="product-name">iPhone Minis</div>
+    </div>
+    <div class="product">
+      <img src="iphonepulse.png" alt="iPhone Pulse">
+      <div class="product-name">iPhone Pulse</div>
+    </div>
+    <div class="product">
+      <img src="iplanner.png" alt="iPlanner">
+      <div class="product-name">iPlanner</div>
+    </div>
+    <div class="product">
+      <img src="iradio.png" alt="iRadio">
+      <div class="product-name">iRadio</div>
+    </div>
+    <div class="product">
+      <img src="macmini.png" alt="Mac Mini">
+      <div class="product-name">Mac Mini</div>
+    </div>
+    <div class="product">
+      <img src="mac-portable.png" alt="Mac Portable">
+      <div class="product-name">Mac Portable</div>
+    </div>
+    <div class="product">
+      <img src="macbookairduo.png" alt="MacBook Air Duo">
+      <div class="product-name">MacBook Air Duo</div>
+    </div>
+    <div class="product">
+      <img src="magicboardpro.png" alt="Magic Board Pro">
+      <div class="product-name">Magic Board Pro</div>
+    </div>
+    <div class="product">
+      <img src="magicmousepro.png" alt="Magic Mouse Pro">
+      <div class="product-name">Magic Mouse Pro</div>
+    </div>
+    <div class="product">
+      <img src="studiodisplay.png" alt="Studio Display">
+      <div class="product-name">Studio Display</div>
+    </div>
   </div>
 </body>
 </html>
