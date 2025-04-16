@@ -51,15 +51,62 @@
       font-size: 0.9em;
       color: #666;
     }
-    model-viewer {
+    #viewer-container {
       width: 100%;
-      height: 400px;
-      background-color: #f0f0f0;
-      margin-top: 20px;
+      height: 600px;
+      background-color: #ccc;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Tech Concepts</h1>
+    <p>Explore futuristic concepts from Apple, Microsoft, and more</p>
+  </header>
+
+  <div class="section">
+    <h2>3D Model Viewer</h2>
+    <div id="viewer-container"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/GLTFLoader.min.js"></script>
+
+  <script>
+    // Scénář pro načítání 3D modelu
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / 600, 0.1, 1000);
+    var renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, 600);
+    document.getElementById('viewer-container').appendChild(renderer.domElement);
+
+    // Načítání modelu
+    var loader = new THREE.GLTFLoader();
+    loader.load('sample.glb', function (gltf) {
+      scene.add(gltf.scene);
+      gltf.scene.scale.set(1, 1, 1); // Upravte velikost modelu podle potřeby
+      gltf.scene.position.set(0, 0, 0); // Upravte pozici modelu
+      animate();
+    }, undefined, function (error) {
+      console.error(error);
+    });
+
+    // Osvětlení scény
+    var light = new THREE.AmbientLight(0x404040); // měkké bílé světlo
+    scene.add(light);
+
+    // Animace pro otáčení modelu
+    function animate() {
+      requestAnimationFrame(animate);
+      scene.rotation.y += 0.01; // Otáčení modelu
+      renderer.render(scene, camera);
+    }
+
+    // Nastavení kamery
+    camera.position.z = 5;
+  </script>
+</body>
+</html>
   <header>
     <h1>Tech Concepts</h1>
     <p>Explore futuristic concepts from Apple, Microsoft, and more</p>
