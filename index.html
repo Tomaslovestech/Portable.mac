@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -51,6 +51,12 @@
       font-size: 0.9em;
       color: #666;
     }
+    model-viewer {
+      width: 100%;
+      height: 400px;
+      background-color: #f0f0f0;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -97,111 +103,28 @@
   </div>
 
   <div class="section">
-    <h2>Gaming</h2>
-    <div class="product-grid">
-      <div class="product"><img src="appleigames.png" alt="Apple iGames"><h3>Apple iGames</h3></div>
-      <div class="product"><img src="applegamepad.png" alt="Apple GamePad"><h3>Apple GamePad</h3></div>
-      <div class="product"><img src="appleconsole.png" alt="Apple Gaming Console"><h3>Apple Gaming Console</h3></div>
-      <div class="product"><img src="applefs2024.png" alt="Flight Simulator 2024"><h3>Apple Flight Simulator 2024</h3></div>
-    </div>
+    <h2>3D Product Example</h2>
+    <model-viewer src="sample.glb" alt="3D model" auto-rotate camera-controls background-color="#f0f0f0"></model-viewer>
   </div>
 
+  <!-- Android Concept -->
   <div class="section">
-    <h2>Software & Apps</h2>
-    <div class="product-grid">
-      <div class="product"><img src="inote.png" alt="iNote"><h3>iNote</h3></div>
-      <div class="product"><img src="imindmap.png" alt="iMindMap"><h3>iMindMap</h3></div>
-      <div class="product"><img src="iplanner.png" alt="iPlanner"><h3>iPlanner</h3></div>
-      <div class="product"><img src="iradio.png" alt="iRadio"><h3>iRadio</h3></div>
-      <div class="product"><img src="appleiwork.png" alt="iWork"><h3>Apple iWork</h3></div>
-      <div class="product"><img src="iphonepulse.png" alt="iPhone Pulse App"><h3>iPhone Pulse App</h3></div>
+    <h2>Android Concepts</h2>
+    <div class="product">
+      <img src="galaxys26ultra.png" alt="Samsung Galaxy S26">
+      <h2>Samsung Galaxy S26</h2>
+      <p>The S26 is a cutting-edge Android smartphone designed to deliver high performance with an elegant design. Featuring the latest technology, it's built to offer an immersive user experience.</p>
+      <ul>
+        <li><strong>Display:</strong> 6.7" OLED, 120Hz refresh rate</li>
+        <li><strong>Processor:</strong> Qualcomm Snapdragon 8 Elite</li>
+        <li><strong>Camera:</strong> 200MP rear camera, 48MP front camera</li>
+        <li><strong>Battery:</strong> 5500mAh with ultra fast charging</li>
+        <li><strong>Storage:</strong> 128GB / 256GB / 512GB / 1TB</li>
+        <li><strong>Operating System:</strong> Android 16 with ONEUI 7</li>
+      </ul>
     </div>
   </div>
 
-  <div class="section">
-    <h2>Microsoft Concepts</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="windows11phone.png" alt="Windows Phone 11">
-        <h3>Windows Phone 11</h3>
-        <p>Windows 11 comeback to legend. A new generation of mobile experience powered by Windows 11. Seamless, sleek, and legendary.</p>
-      </div>
-      <div class="product">
-        <img src="xboxhandheld.png" alt="Xbox Portable">
-        <h3>Xbox Portable</h3>
-        <p>The future of gaming on the go. Xbox Portable brings console-quality gaming to your hands with a sleek design, powerful hardware, and access to the Xbox Game Pass library.</p>
-      </div>
-    </div>
-  </div>
-
-  <section id="windows-12" style="padding: 40px; background-color: #eef2f5;">
-    <h2>Windows 12 Concept</h2>
-    <img src="windows12.png" alt="Windows 12 Concept" style="width: 300px; border-radius: 10px;">
-    <p><strong>Slogan:</strong> The next leap in productivity and design.</p>
-    <p><strong>Description:</strong> Windows 12 brings a futuristic and cleaner user interface, more powerful widget integration, and AI-enhanced workflows. This concept showcases how the next generation of Windows might look and feel — intuitive, elegant, and ready for the future.</p>
-  </section><div class="product">
-  <img src="msrealgamingpc.png" alt="Microsoft Real Gaming PC">
-  <h2>Microsoft Real Gaming PC</h2>
-  <p>The ultimate gaming powerhouse designed for next-gen performance and future-proof flexibility. Whether you're a hardcore gamer or a creative professional, this machine gives you the edge.</p>
-  <ul>
-    <li><strong>GPU:</strong> NVIDIA RTX 5090 or AMD RX 9070XT</li>
-    <li><strong>CPU:</strong> AMD Ryzen 9 9950x3D</li>
-    <li><strong>Motherboard:</strong> ASUS MAG A580</li>
-    <li><strong>RAM Options:</strong> 32GB / 64GB / 128GB DDR5</li>
-    <li><strong>SSD:</strong> 1TB / 2TB / 4TB (NVMe)</li>
-    <li><strong>HDD:</strong> 8TB</li>
-    <li><strong>PSU:</strong> ASUS MAG A1250 (1250W)</li>
-    <li><strong>Cooling:</strong> Advanced water cooling</li>
-    <li><strong>Case:</strong> Premium ATX with RGB and tempered glass</li>
-  </ul>
-  </div>
-<section id="android-concepts">
-  <h1>Android Concepts</h1>
-  
-  <!-- Android Product 1: S26 -->
-  <div class="product">
-    <img src="galaxys26ultra.png" alt="Android Product S26">
-    <h2>Samsung Galaxy S26</h2>
-    <p>The S26 is a cutting-edge Android smartphone designed to deliver high performance with an elegant design. Featuring the latest technology, it's built to offer an immersive user experience.</p>
-    <ul>
-      <li><strong>Display:</strong> 6.7" OLED, 120Hz refresh rate</li>
-      <li><strong>Processor:</strong> Qualcomm Snapdragon 8 Elite</li>
-      <li><strong>Camera:</strong> 200MP rear camera, 48MP front camera</li>
-      <li><strong>Battery:</strong> 5500mAh with ultra fast charging</li>
-      <li><strong>Storage:</strong> 128GB / 256GB / 512GB / 1TB</li>
-      <li><strong>Operating System:</strong> Android 16 with ONEUI 7</li>
-    </ul>
-  </div>
-  <!-- Android Product 2: Samsung Z Roll -->
-<div class="product">
-  <img src="samsungzroll.png" alt="Samsung Z Roll">
-  <h2>Samsung Z Roll</h2>
-  <p>Samsung Z Roll is a futuristic rollable smartphone that combines innovation with portability. The device features a rollable OLED display that expands from a standard phone size into a small tablet.</p>
-  <ul>
-    <li><strong>Display:</strong> 6.5" rolled / 8.1" unrolled OLED</li>
-    <li><strong>Processor:</strong> Exynos 2500 / Snapdragon 8 Gen 3 (Region-based)</li>
-    <li><strong>Camera:</strong> Triple camera system (108MP + 12MP + 10MP)</li>
-    <li><strong>Battery:</strong> 4800mAh, wireless charging support</li>
-    <li><strong>Storage:</strong> 256GB / 512GB</li>
-    <li><strong>Special Feature:</strong> Rollable display with edge detection</li>
-  </ul>
-</div>
-<!-- Android Product 3: Samsung G Fold -->
-<div class="product">
-  <img src="samsunggfold.png" alt="Samsung G Fold">
-  <h2>Samsung G Fold</h2>
-  <p>Samsung G Fold represents the next generation of foldable smartphones, with a design inspired by the Huawei Mate X series. It offers a large outward-folding display, premium build quality, and seamless multitasking features for power users and creatives alike.</p>
-  <ul>
-    <li><strong>Display:</strong> 7.8" Foldable AMOLED, 120Hz refresh rate</li>
-    <li><strong>Processor:</strong> Snapdragon 8 Gen 3</li>
-    <li><strong>Camera:</strong> Quad camera (200MP + 12MP + 10MP + Depth Sensor)</li>
-    <li><strong>Battery:</strong> 5000mAh with ultra-fast charging</li>
-    <li><strong>Storage:</strong> 512GB / 1TB</li>
-    <li><strong>Special Feature:</strong> Foldable multitasking interface with S-Pen support</li>
-  </ul>
-</div>
-
-
-  
 </body>
 </html>
+
