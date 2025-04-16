@@ -1,181 +1,145 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tech Concepts</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #f2f2f2; margin: 0; padding: 0; }
-    header { background-color: #333; color: #fff; padding: 20px; text-align: center; }
-    h1 { margin: 0; }
-    .section { padding: 20px; }
-    .section h2 { color: #333; }
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .product { background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
-    .product img { width: 100%; height: auto; border-radius: 8px; }
-    .product h3 { margin: 10px 0 5px; font-size: 1.1em; }
-    .product p { font-size: 0.9em; color: #666; }
-  </style><head>
-  <style>
-    .image-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
     }
-
-    .image-container img {
-      max-width: 100%;
-      height: auto;
-      flex: 1 1 30%;
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
-
-    img {
+    h1 {
+      margin: 0;
+    }
+    .section {
+      padding: 20px;
+    }
+    .section h2 {
+      color: #333;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .product img {
       width: 100%;
       height: auto;
+      border-radius: 8px;
+    }
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1em;
+    }
+    .product p {
+      font-size: 0.9em;
+      color: #666;
     }
   </style>
-  </head>
 </head>
 <body>
   <header>
     <h1>Tech Concepts</h1>
     <p>Explore futuristic concepts from Apple, Microsoft, and more</p>
-  </header>  <div class="section">
+  </header>
+
+  <div class="section">
     <h2>Apple Concepts</h2>
     <div class="product-grid">
-      <div class="product"><img src="mac-portable.png" alt="Mac Portable M1" /><h3>Mac Portable M1</h3></div>
-      <div class="product"><img src="mac-mini.png" alt="Mac mini" /><h3>Mac mini</h3></div>
-      <div class="product"><img src="applemacbookdual.png" alt="MacBook Air Duo" /><h3>MacBook Air Duo</h3></div>
-      <div class="product"><img src="OIP.jpeg" alt="MacBook Air Triple" /><h3>MacBook Air Triple</h3></div>
-      <div class="product"><img src="iphone-ultra-x.png" alt="iPhone Ultra X" /><h3>iPhone Ultra X</h3></div>
-      <div class="product"><img src="iphone-flip.png" alt="iPhone Flip" /><h3>iPhone Flip</h3></div>
-      <div class="product"><img src="iphoneminis.png" alt="iPhone Minis" /><h3>iPhone Minis</h3></div>
-      <div class="product"><img src="iPodrewind.png" alt="iPod Rewind" /><h3>iPod Rewind</h3></div>
+      <div class="product"><img src="mac-portable.png" alt="Mac Portable M1"><h3>Mac Portable M1</h3></div>
+      <div class="product"><img src="mac-mini.png" alt="Mac mini"><h3>Mac mini</h3></div>
+      <div class="product"><img src="applemacbookdual.png" alt="MacBook Air Duo"><h3>MacBook Air Duo</h3></div>
+      <div class="product"><img src="OIP.jpeg" alt="MacBook Air Triple"><h3>MacBook Air Triple</h3></div>
+      <div class="product"><img src="iphone-ultra-x.png" alt="iPhone Ultra X"><h3>iPhone Ultra X</h3></div>
+      <div class="product"><img src="iphone-flip.png" alt="iPhone Flip"><h3>iPhone Flip</h3></div>
+      <div class="product"><img src="iphoneminis.png" alt="iPhone Minis"><h3>iPhone Minis</h3></div>
+      <div class="product"><img src="iPodrewind.png" alt="iPod Rewind"><h3>iPod Rewind</h3></div>
       <div class="product"><h3>iPad Pro Touch</h3></div>
-      <div class="product"><img src="apple-fitband.png" alt="Apple FitBand" /><h3>Apple FitBand</h3></div>
-      <div class="product"><img src="applepencil.png" alt="Apple Pencil" /><h3>Apple Pencil</h3></div>
-      <div class="product"><img src="appleread.png" alt="Apple Read" /><h3>Apple Read</h3></div>
-      <div class="product"><img src="applereal.png" alt="Apple Real Glasses" /><h3>Apple Real Glasses</h3></div>
-      <div class="product"><img src="apple-visiontv1.png" alt="Apple Vision TV" /><h3>Apple Vision TV</h3></div>
-      <div class="product"><img src="applevisiontv2.png" alt="Apple Vision TV 2" /><h3>Apple Vision TV 2</h3></div>
-      <div class="product"><img src="apple-vision-pro-2.png" alt="Apple Vision Pro 2" /><h3>Apple Vision Pro 2</h3></div>
-      <div class="product"><img src="appleusbhub.png" alt="Apple USB Hub" /><h3>Apple USB Hub</h3></div>
-      <div class="product"><img src="magicmousepro.png" alt="Magic Mouse Pro" /><h3>Magic Mouse Pro</h3></div>
-      <div class="product"><img src="magicboardpro.png" alt="MagicBoard Pro" /><h3>MagicBoard Pro</h3></div>
-      <div class="product"><img src="appledockstation.png" alt="Dock Station" /><h3>Apple Dock Station</h3></div>
-      <div class="product"><img src="appledualpower.png" alt="Dual Power Adapter" /><h3>Dual Power Adapter</h3></div>
-      <div class="product"><img src="applesmartcoverpro.png" alt="Smart Cover Pro" /><h3>Smart Cover Pro</h3></div>
-      <div class="product"><img src="applenas.png" alt="Apple NAS" /><h3>Apple NAS</h3></div>
-      <div class="product"><img src="applepowerbank.png" alt="Apple Power Bank" /><h3>Apple Power Bank</h3></div>
-      <div class="product"><img src="appleprinter.png" alt="Apple Printer" /><h3>Apple Printer</h3></div>
-      <div class="product"><img src="appleairtagspro.png" alt="Apple AirTags Pro" /><h3>Apple AirTags Pro</h3></div>
-      <div class="product"><img src="appleetherport.png" alt="Apple EtherPort" /><h3>Apple EtherPort</h3></div>
-      <div class="product"><img src="appleairconnect.png" alt="Apple AirConnect" /><h3>Apple AirConnect</h3></div>
-      <div class="product"><img src="applehomeassitant.png" alt="Home Assistant" /><h3>Apple Home Assistant</h3></div>
-      <div class="product"><img src="applecoregpu.png" alt="Core GPU" /><h3>Apple Core GPU</h3></div>
-      <div class="product"><img src="M5processors.png" alt="M5 Chips" /><h3>Apple M5, M5 Max, M5 Ultra</h3></div>
+      <div class="product"><img src="apple-fitband.png" alt="Apple FitBand"><h3>Apple FitBand</h3></div>
+      <div class="product"><img src="applepencil.png" alt="Apple Pencil"><h3>Apple Pencil</h3></div>
+      <div class="product"><img src="appleread.png" alt="Apple Read"><h3>Apple Read</h3></div>
+      <div class="product"><img src="applereal.png" alt="Apple Real Glasses"><h3>Apple Real Glasses</h3></div>
+      <div class="product"><img src="apple-visiontv1.png" alt="Apple Vision TV"><h3>Apple Vision TV</h3></div>
+      <div class="product"><img src="applevisiontv2.png" alt="Apple Vision TV 2"><h3>Apple Vision TV 2</h3></div>
+      <div class="product"><img src="apple-vision-pro-2.png" alt="Apple Vision Pro 2"><h3>Apple Vision Pro 2</h3></div>
+      <div class="product"><img src="appleusbhub.png" alt="Apple USB Hub"><h3>Apple USB Hub</h3></div>
+      <div class="product"><img src="magicmousepro.png" alt="Magic Mouse Pro"><h3>Magic Mouse Pro</h3></div>
+      <div class="product"><img src="magicboardpro.png" alt="MagicBoard Pro"><h3>MagicBoard Pro</h3></div>
+      <div class="product"><img src="appledockstation.png" alt="Dock Station"><h3>Apple Dock Station</h3></div>
+      <div class="product"><img src="appledualpower.png" alt="Dual Power Adapter"><h3>Dual Power Adapter</h3></div>
+      <div class="product"><img src="applesmartcoverpro.png" alt="Smart Cover Pro"><h3>Smart Cover Pro</h3></div>
+      <div class="product"><img src="applenas.png" alt="Apple NAS"><h3>Apple NAS</h3></div>
+      <div class="product"><img src="applepowerbank.png" alt="Apple Power Bank"><h3>Apple Power Bank</h3></div>
+      <div class="product"><img src="appleprinter.png" alt="Apple Printer"><h3>Apple Printer</h3></div>
+      <div class="product"><img src="appleairtagspro.png" alt="Apple AirTags Pro"><h3>Apple AirTags Pro</h3></div>
+      <div class="product"><img src="appleetherport.png" alt="Apple EtherPort"><h3>Apple EtherPort</h3></div>
+      <div class="product"><img src="appleairconnect.png" alt="Apple AirConnect"><h3>Apple AirConnect</h3></div>
+      <div class="product"><img src="applehomeassitant.png" alt="Home Assistant"><h3>Apple Home Assistant</h3></div>
+      <div class="product"><img src="applecoregpu.png" alt="Core GPU"><h3>Apple Core GPU</h3></div>
+      <div class="product"><img src="M5processors.png" alt="M5 Chips"><h3>Apple M5, M5 Max, M5 Ultra</h3></div>
     </div>
-  </div>  <div class="section">
+  </div>
+
+  <div class="section">
     <h2>Gaming</h2>
     <div class="product-grid">
-      <div class="product"><img src="appleigames.png" alt="Apple iGames" /><h3>Apple iGames</h3></div>
-      <div class="product"><img src="applegamepad.png" alt="Apple GamePad" /><h3>Apple GamePad</h3></div>
-      <div class="product"><img src="appleconsole.png" alt="Apple Gaming Console" /><h3>Apple Gaming Console</h3></div>
-      <div class="product"><img src="applefs2024.png" alt="Flight Simulator 2024" /><h3>Apple Flight Simulator 2024</h3></div>
+      <div class="product"><img src="appleigames.png" alt="Apple iGames"><h3>Apple iGames</h3></div>
+      <div class="product"><img src="applegamepad.png" alt="Apple GamePad"><h3>Apple GamePad</h3></div>
+      <div class="product"><img src="appleconsole.png" alt="Apple Gaming Console"><h3>Apple Gaming Console</h3></div>
+      <div class="product"><img src="applefs2024.png" alt="Flight Simulator 2024"><h3>Apple Flight Simulator 2024</h3></div>
     </div>
-  </div>  <div class="section">
+  </div>
+
+  <div class="section">
     <h2>Software & Apps</h2>
     <div class="product-grid">
-      <div class="product"><img src="inote.png" alt="iNote" /><h3>iNote</h3></div>
-      <div class="product"><img src="imindmap.png" alt="iMindMap" /><h3>iMindMap</h3></div>
-      <div class="product"><img src="iplanner.png" alt="iPlanner" /><h3>iPlanner</h3></div>
-      <div class="product"><img src="iradio.png" alt="iRadio" /><h3>iRadio</h3></div>
-      <div class="product"><img src="appleiwork.png" alt="iWork" /><h3>Apple iWork</h3></div>
-      <div class="product"><img src="iphonepulse.png" alt="iPhone Pulse App" /><h3>iPhone Pulse App</h3></div>
-<section id="microsoft-concepts">
-  <h2>Microsoft Concepts</h2>
-  <div class="products">
-    <!-- Sem vlož produkt -->
-    <div class="product">
-      <img src="windows11phone.png" alt="Windows Phone 11">
-      <h3>Windows Phone 11</h3>
-      <p>Windows 11 comeback to legend. A new generation of mobile experience powered by Windows 11. Seamless, sleek, and legendary.</p>
+      <div class="product"><img src="inote.png" alt="iNote"><h3>iNote</h3></div>
+      <div class="product"><img src="imindmap.png" alt="iMindMap"><h3>iMindMap</h3></div>
+      <div class="product"><img src="iplanner.png" alt="iPlanner"><h3>iPlanner</h3></div>
+      <div class="product"><img src="iradio.png" alt="iRadio"><h3>iRadio</h3></div>
+      <div class="product"><img src="appleiwork.png" alt="iWork"><h3>Apple iWork</h3></div>
+      <div class="product"><img src="iphonepulse.png" alt="iPhone Pulse App"><h3>iPhone Pulse App</h3></div>
     </div>
-</section>
+  </div>
+
+  <div class="section">
+    <h2>Microsoft Concepts</h2>
+    <div class="product-grid">
       <div class="product">
-  <img src="xboxhandheld.png" alt="Xbox Portable">
-  <h3>Xbox Portable</h3>
-  <p>The future of gaming on the go. Xbox Portable brings console-quality gaming to your hands with a sleek design, powerful hardware, and access to the Xbox Game Pass library.</p>
-<!-- Windows 12 Concept Section -->
-<section id="windows-12" style="padding: 40px; background-color: #eef2f5;">
-  <h2>Windows 12 Concept</h2>
-  <img src="windows12.png" alt="Windows 12 Concept" style="width: 300px; border-radius: 10px;">
-  <p><strong>Slogan:</strong> The next leap in productivity and design.</p>
-  <p><strong>Description:</strong> Windows 12 brings a futuristic and cleaner user interface, more powerful widget integration, and AI-enhanced workflows. This concept showcases how the next generation of Windows might look and feel — intuitive, elegant, and ready for the future.</p>
-</section>
-        
-<section id="samsung">
-  <h2>Samsung Concepts</h2>
-  <div class="product">
-    <img src="samsunggfold.png" alt="Samsung G Fold">
-    <h3>Samsung G Fold</h3>
-    <p>Introducing the double-folding phone with zero stress. Thanks to its silicon-carbon battery, the Samsung G Fold doesn’t break, doesn’t bend out of shape – it just works. Inspired by Huawei Mate XT, but with next-gen Snapdragon 8 Elite and One UI 7 (Android 16).</p>
-    <p class="slogan">"Double fold. Zero stress."</p>
+        <img src="windows11phone.png" alt="Windows Phone 11">
+        <h3>Windows Phone 11</h3>
+        <p>Windows 11 comeback to legend. A new generation of mobile experience powered by Windows 11. Seamless, sleek, and legendary.</p>
+      </div>
+      <div class="product">
+        <img src="xboxhandheld.png" alt="Xbox Portable">
+        <h3>Xbox Portable</h3>
+        <p>The future of gaming on the go. Xbox Portable brings console-quality gaming to your hands with a sleek design, powerful hardware, and access to the Xbox Game Pass library.</p>
+      </div>
+    </div>
   </div>
-</section><!-- Samsung Galaxy S26 Section -->
-<section id="samsung-galaxy-s26" style="padding: 40px; background-color: #f4f4f4;">
-  <h2>Samsung Galaxy S26</h2>
-  <img src="samsunggalaxys26.png" alt="Samsung Galaxy S26" style="width: 300px; border-radius: 10px;">
-  <p><strong>Slogan:</strong> The future is now – faster, smarter, sleeker.</p>
-  <p><strong>Description:</strong> The Samsung Galaxy S26 redefines the Android flagship experience. With the powerful Snapdragon 8 Gen 4 Elite chip, AI-driven features, and a stunning 6.9" Dynamic AMOLED 3X display, it's designed to impress. Coming with OneUI 7 and Android 16, it's the phone of the future, today.</p>
-</section><div class="product">
-  <img src="samsungzroll.png" alt="Samsung Z Roll">
-  <h2>Samsung Z Roll</h2>
-  <p><strong>Slogan:</strong> "Bend it. Pull it. Drop it. NOTHING."</p>
-  <p>The first truly flexible and ultra-durable smartphone from Samsung. Built with a revolutionary silicon-carbon battery and an ultra-flexible AMOLED screen, the Z Roll can handle drops, bends, and pressure like never before.</p>
-  <ul>
-    <li>Flexible 7.2" AMOLED display</li>
-    <li>Durable body made of polymer and graphene</li>
-    <li>Silicon-carbon battery with extended life</li>
-    <li>Snapdragon 8 Gen 3 or Exynos Flex chipset</li>
-    <li>FlexCare AI for adaptive screen behavior </li>
 
+  <section id="windows-12" style="padding: 40px; background-color: #eef2f5;">
+    <h2>Windows 12 Concept</h2>
+    <img src="windows12.png" alt="Windows 12 Concept" style="width: 300px; border-radius: 10px;">
+    <p><strong>Slogan:</strong> The next leap in productivity and design.</p>
+    <p><strong>Description:</strong> Windows 12 brings a futuristic and cleaner user interface, more powerful widget integration, and AI-enhanced workflows. This concept showcases how the next generation of Windows might look and feel — intuitive, elegant, and ready for the future.</p>
+  </section>
 
-        <h1>Other Android Concepts</h1>
-        <!-- Google Pixel 10 -->
-<div class="product">
-  <img src="googlepixel10.png" alt="Google Pixel 10">
-  <h2>Google Pixel 10</h2>
-  <p>Next-gen Android experience from Google. Powered by the latest Pixel Neural Core, Android 16, and advanced AI camera features.</p>
-
-
-      <h1>Xiaomi concepts</h1>
-        <!-- Xiaomi 16 -->
-<div class="product">
-  <img src="xiaomi16.png" alt="Xiaomi 16">
-  <h2>Xiaomi 16</h2>
-  <p>Flagship killer powered by Snapdragon 8 Gen 4, AMOLED 144Hz display and HyperOS with Android 16. Blending power and design.</p
-    </div><!-- Xiaomi Pad Ultra 16 -->
-<div class="product">
-  <img src="xiaomipadultra16.png" alt="Xiaomi Pad Ultra 16">
-  <h2>Xiaomi Pad Ultra 16</h2>
-  <p>14" AMOLED display, Snapdragon X Elite chip, HyperOS optimized for multitasking. Your laptop replacement, evolved.</p>
-</div>
-  <section id="asus-concepts">
-  <h1>Asus Concepts</h1>
-
-  <div class="product">
-    <img src="asusrogphoenix.png" alt="Asus ROG Phoenix">
-    <h2>Asus ROG Phoenix</h2>
-    <p>The next-gen ROG gaming phone with liquid cooling, 165Hz AMOLED screen and AI-tuned game performance. Made for mobile eSports legends.</p>
-    <section id="asus-concepts">
-  <h1>Asus Concepts</h1>
-
-  <div class="product">
-    <img src="rogtitantab.png" alt="Asus ROG TitanTab">
-    <h2>Asus ROG TitanTab</h2>
-    <p>Asus ROG TitanTab is the ultimate gaming tablet powered by the latest Snapdragon GX Elite chip, featuring a 12.9-inch 165Hz AMOLED display, vapor chamber cooling, detachable RGB keyboard, and custom ROG GamePad support. Built for hardcore mobile gaming.</p>
-  </div>
-    </section>
- 
 </body>
 </html>
