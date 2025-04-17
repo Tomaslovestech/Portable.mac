@@ -3,33 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3D Model Viewer</title>
-  <!-- Import model-viewer knihovny -->
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@1.9.0/dist/model-viewer.min.js"></script>
-</head>
-<body>
-  <h1>3D Model Viewer</h1>
-  <!-- Místo pro model -->
-  <model-viewer
-    src="https://cdn.jsdelivr.net/gh/Tomaslovestech/Portable.mac@main/sample%20(1).glb"
-    alt="3D Model"
-    auto-rotate
-    camera-controls
-    background-color="#f0f0f0"
-    style="width: 100%; height: 500px;">
-  </model-viewer>
-</body>
-</html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tech Concepts</title>
   
   <!-- Import model-viewer knihovny -->
-  <script type="module">
-    import '@google/model-viewer';
-  </script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@1.9.0/dist/model-viewer.min.js"></script>
 
   <style>
     body {
@@ -94,38 +71,62 @@
   <div class="section">
     <h2>Apple Concepts</h2>
     <div class="product-grid">
-      <!-- Apple products list -->
-      <div class="product"><img src="mac-portable.png" alt="Mac Portable M1"><h3>Mac Portable M1</h3></div>
-      <div class="product"><img src="mac-mini.png" alt="Mac mini"><h3>Mac mini</h3></div>
-      <div class="product"><img src="applemacbookdual.png" alt="MacBook Air Duo"><h3>MacBook Air Duo</h3></div>
-      <div class="product"><img src="OIP.jpeg" alt="MacBook Air Triple"><h3>MacBook Air Triple</h3></div>
-      <div class="product"><img src="iphone-ultra-x.png" alt="iPhone Ultra X"><h3>iPhone Ultra X</h3></div>
-      <div class="product"><img src="iphone-flip.png" alt="iPhone Flip"><h3>iPhone Flip</h3></div>
-      <div class="product"><img src="iphoneminis.png" alt="iPhone Minis"><h3>iPhone Minis</h3></div>
-      <div class="product"><img src="iPodrewind.png" alt="iPod Rewind"><h3>iPod Rewind</h3></div>
-      <div class="product"><h3>iPad Pro Touch</h3></div>
-      <div class="product"><img src="apple-fitband.png" alt="Apple FitBand"><h3>Apple FitBand</h3></div>
-      <div class="product"><img src="applepencil.png" alt="Apple Pencil"><h3>Apple Pencil</h3></div>
-      <div class="product"><img src="appleread.png" alt="Apple Read"><h3>Apple Read</h3></div>
-      <div class="product"><img src="applereal.png" alt="Apple Real Glasses"><h3>Apple Real Glasses</h3></div>
-      <div class="product"><img src="apple-visiontv1.png" alt="Apple Vision TV"><h3>Apple Vision TV</h3></div>
-      <div class="product"><img src="applevisiontv2.png" alt="Apple Vision TV 2"><h3>Apple Vision TV 2</h3></div>
-      <div class="product"><img src="apple-vision-pro-2.png" alt="Apple Vision Pro 2"><h3>Apple Vision Pro 2</h3></div>
-      <div class="product"><img src="appleusbhub.png" alt="Apple USB Hub"><h3>Apple USB Hub</h3></div>
-      <div class="product"><img src="magicmousepro.png" alt="Magic Mouse Pro"><h3>Magic Mouse Pro</h3></div>
-      <div class="product"><img src="magicboardpro.png" alt="MagicBoard Pro"><h3>MagicBoard Pro</h3></div>
-      <div class="product"><img src="appledockstation.png" alt="Dock Station"><h3>Apple Dock Station</h3></div>
-      <div class="product"><img src="appledualpower.png" alt="Dual Power Adapter"><h3>Dual Power Adapter</h3></div>
-      <div class="product"><img src="applesmartcoverpro.png" alt="Smart Cover Pro"><h3>Smart Cover Pro</h3></div>
-      <div class="product"><img src="applenas.png" alt="Apple NAS"><h3>Apple NAS</h3></div>
-      <div class="product"><img src="applepowerbank.png" alt="Apple Power Bank"><h3>Apple Power Bank</h3></div>
-      <div class="product"><img src="appleprinter.png" alt="Apple Printer"><h3>Apple Printer</h3></div>
-      <div class="product"><img src="appleairtagspro.png" alt="Apple AirTags Pro"><h3>Apple AirTags Pro</h3></div>
-      <div class="product"><img src="appleetherport.png" alt="Apple EtherPort"><h3>Apple EtherPort</h3></div>
-      <div class="product"><img src="appleairconnect.png" alt="Apple AirConnect"><h3>Apple AirConnect</h3></div>
-      <div class="product"><img src="applehomeassitant.png" alt="Home Assistant"><h3>Apple Home Assistant</h3></div>
-      <div class="product"><img src="applecoregpu.png" alt="Core GPU"><h3>Apple Core GPU</h3></div>
-      <div class="product"><img src="M5processors.png" alt="M5 Chips"><h3>Apple M5, M5 Max, M5 Ultra</h3></div>
+      <!-- Apple products list with models -->
+      <div class="product">
+        <img src="mac-portable.png" alt="Mac Portable M1">
+        <h3>Mac Portable M1</h3>
+        <model-viewer
+          src="https://cdn.jsdelivr.net/gh/Tomaslovestech/Portable.mac@main/sample%20(1).glb"
+          alt="3D Model"
+          auto-rotate
+          camera-controls
+          background-color="#f0f0f0"
+          style="width: 100%; height: 200px;">
+        </model-viewer>
+      </div>
+      <div class="product">
+        <img src="mac-mini.png" alt="Mac mini">
+        <h3>Mac mini</h3>
+        <p>Compact and powerful, the Mac mini is the ultimate desktop solution.</p>
+        <!-- Optional 3D Model -->
+        <model-viewer
+          src="https://example.com/path/to/mac-mini-model.glb"
+          alt="Mac Mini 3D Model"
+          auto-rotate
+          camera-controls
+          background-color="#f0f0f0"
+          style="width: 100%; height: 200px;">
+        </model-viewer>
+      </div>
+      <div class="product">
+        <img src="iphone-ultra-x.png" alt="iPhone Ultra X">
+        <h3>iPhone Ultra X</h3>
+        <p>The latest ultra-powered iPhone with advanced features and stunning performance.</p>
+        <!-- Optional 3D Model -->
+        <model-viewer
+          src="https://example.com/path/to/iphone-ultra-x-model.glb"
+          alt="iPhone Ultra X 3D Model"
+          auto-rotate
+          camera-controls
+          background-color="#f0f0f0"
+          style="width: 100%; height: 200px;">
+        </model-viewer>
+      </div>
+      <div class="product">
+        <img src="macbook-air-duo.png" alt="MacBook Air Duo">
+        <h3>MacBook Air Duo</h3>
+        <p>The dual-screen MacBook Air concept that enhances productivity.</p>
+        <!-- Optional 3D Model -->
+        <model-viewer
+          src="https://example.com/path/to/macbook-air-duo-model.glb"
+          alt="MacBook Air Duo 3D Model"
+          auto-rotate
+          camera-controls
+          background-color="#f0f0f0"
+          style="width: 100%; height: 200px;">
+        </model-viewer>
+      </div>
+      <!-- You can continue adding more products with their 3D models in the same way -->
     </div>
   </div>
 
@@ -136,17 +137,17 @@
         <img src="xbox-portable.png" alt="Xbox Portable">
         <h3>Xbox Portable</h3>
         <p>The portable version of the iconic Xbox gaming console. Enjoy gaming on the go.</p>
+        <!-- Optional 3D Model -->
+        <model-viewer
+          src="https://example.com/path/to/xbox-portable-model.glb"
+          alt="Xbox Portable 3D Model"
+          auto-rotate
+          camera-controls
+          background-color="#f0f0f0"
+          style="width: 100%; height: 200px;">
+        </model-viewer>
       </div>
-      <div class="product">
-        <img src="windows-11-phone.png" alt="Windows 11 Phone">
-        <h3>Windows 11 Phone</h3>
-        <p>The Windows 11 powered smartphone, offering seamless integration with your PC experience.</p>
-      </div>
-      <div class="product">
-        <img src="windows-12.png" alt="Windows 12 concept">
-        <h3>Windows 12</h3>
-        <p>The next evolution of Windows, bringing powerful new features to your desktop.</p>
-      </div>
+      <!-- More Microsoft products with their respective models can go here -->
     </div>
   </div>
 
@@ -156,30 +157,19 @@
       <div class="product">
         <img src="galaxys26ultra.png" alt="Samsung Galaxy S26">
         <h3>Samsung Galaxy S26</h3>
-        <p>The S26 is a cutting-edge Android smartphone designed to deliver high performance with an elegant design. Featuring the latest technology, it's built to offer an immersive user experience.</p>
+        <p>The S26 is a cutting-edge Android smartphone designed to deliver high performance with an elegant design.</p>
         <ul>
           <li><strong>Display:</strong> 6.7" OLED, 120Hz refresh rate</li>
           <li><strong>Processor:</strong> Qualcomm Snapdragon 8 Elite</li>
           <li><strong>Camera:</strong> 200MP rear camera, 48MP front camera</li>
-          <li><strong>Battery:</strong> 5500mAh with ultra fast charging</li>
+          <li><strong>Battery:</strong> 5500mAh with ultra-fast charging</li>
           <li><strong>Storage:</strong> 128GB / 256GB / 512GB / 1TB</li>
           <li><strong>Operating System:</strong> Android 16 with ONEUI 7</li>
         </ul>
       </div>
-      <div class="product">
-        <img src="galaxyfoldnext.png" alt="Samsung Galaxy Fold Next">
-        <h3>Samsung Galaxy Fold Next</h3>
-        <p>The next generation foldable phone from Samsung, designed to be more flexible and durable for modern users.</p>
-      </div>
-      <div class="product">
-        <img src="pixel-8xl.png" alt="Google Pixel 8 XL">
-        <h3>Google Pixel 8 XL</h3>
-        <p>Google's latest flagship phone featuring an advanced camera, AI-enhanced features, and the cleanest Android experience.</p>
-      </div>
-      <div class="product">
-        <img src="android-cube-watch.png" alt="Android Cube Smartwatch">
-        <h3>Android Cube Smartwatch</h3>
-        <p>Experience the future of wearable technology with a smartwatch that blends a sleek design with powerful features.</p
+      <!-- More Android products with their respective models can go here -->
+    </div>
   </div>
+
 </body>
-  </html>
+</html>
