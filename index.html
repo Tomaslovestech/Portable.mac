@@ -4,6 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tech Concepts</title>
+  
+  <!-- Import model-viewer knihovny -->
+  <script type="module">
+    import '@google/model-viewer';
+  </script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -154,15 +160,19 @@
         <h3>Android Cube Smartwatch</h3>
         <p>Experience the future of wearable technology with a smartwatch that blends a sleek design with powerful features.</p>
       </div>
-<model-viewer 
-  src="sample(1).glb" 
-  alt="3D Model"
-  auto-rotate 
-  camera-controls 
-  background-color="#f0f0f0"
-  style="width: 100%; height: 500px;">
-</model-viewer>
-
+    </div>
+    <!-- Model Viewer -->
+    <div id="viewer-container">
+      <model-viewer 
+        src="sample(1).glb" 
+        alt="3D Model"
+        auto-rotate 
+        camera-controls 
+        background-color="#f0f0f0"
+        style="width: 100%; height: 500px;">
+      </model-viewer>
+    </div>
   </div>
+
 </body>
   </html>
