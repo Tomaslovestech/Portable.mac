@@ -1,166 +1,128 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tech Concepts</title>  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@1.9.0/dist/model-viewer.min.js"></script>  <style>
+  <title>Tech Concepts</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      font-family: sans-serif;
+      background: #f7f7f7;
       margin: 0;
       padding: 0;
     }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
+    h2 {
       text-align: center;
-    }
-    h1 {
-      margin: 0;
+      margin-top: 40px;
     }
     .section {
-      padding: 20px;
-    }
-    .section h2 {
-      color: #333;
+      margin: 40px auto;
+      max-width: 1200px;
+      padding: 0 20px;
     }
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 20px;
     }
     .product {
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: white;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       text-align: center;
     }
     .product img {
       width: 100%;
-      height: auto;
       border-radius: 8px;
     }
-    .product h3 {
-      margin: 10px 0 5px;
-      font-size: 1.1em;
-    }
-    .product p {
-      font-size: 0.9em;
-      color: #666;
-    }
-    #viewer-container {
+    model-viewer {
       width: 100%;
-      height: 600px;
-      background-color: #ccc;
+      height: 300px;
+      background: #eee;
+      border-radius: 8px;
     }
-  </style></head>
+  </style>
+</head>
 <body>
-  <header>
-    <h1>Tech Concepts</h1>
-    <p>Explore futuristic concepts from Apple, Microsoft, Android and more</p>
-  </header>  <!-- Apple Products Section -->  <div class="section">
-    <h2>Apple Concepts</h2>
+
+  <div class="section">
+    <h2>3D Model</h2>
+    <model-viewer src="sample.glb" alt="3D model" auto-rotate camera-controls></model-viewer>
+  </div>
+
+  <div class="section">
+    <h2>Apple</h2>
     <div class="product-grid">
-      <div class="product">
-        <h3>Magic Mouse Pro</h3>
-        <model-viewer 
-          src="https://cdn.jsdelivr.net/gh/Tomaslovestech/Portable.mac@main/sample%20(1).glb" 
-          alt="Magic Mouse Pro 3D" 
-          auto-rotate 
-          camera-controls 
-          background-color="#f0f0f0" 
-          style="width: 100%; height: 500px;">
-        </model-viewer>
-      </div>
-      <div class="product">
-        <img src="mac-portable.png" alt="Mac Portable M1">
-        <h3>Mac Portable M1</h3>
-      </div>
-      <div class="product">
-        <img src="mac-mini.png" alt="Mac mini">
-        <h3>Mac mini</h3>
-      </div>
-      <div class="product">
-        <img src="applemacbookdual.png" alt="MacBook Air Duo">
-        <h3>MacBook Air Duo</h3>
-      </div>
-      <div class="product">
-        <img src="OIP.jpeg" alt="MacBook Air Triple">
-        <h3>MacBook Air Triple</h3>
-      </div>
-    </div>
-  </div>  <!-- Microsoft Products Section -->  <div class="section">
-    <h2>Microsoft Concepts</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="windows11phone.png" alt="Windows 11 Phone">
-        <h3>Windows 11 Phone</h3>
-        <p>The Windows 11 powered smartphone, offering seamless integration with your PC experience.</p>
-      </div>
-      <div class="product">
-        <img src="xbox-portable.png" alt="Xbox Portable">
-        <h3>Xbox Portable</h3>
-      </div>
-      <div class="product">
-        <img src="windows-12.png" alt="Windows 12">
-        <h3>Windows 12</h3>
-        <p>The next evolution of Windows, bringing powerful new features to your desktop.</p>
-      </div>
-    </div>
-<div class="section">
-  <div class="product-grid">
-    <div class="product">
-      </h3>Xbox portable Concept</h3>
-      <model-viewer 
-        src="models/nintendo_switch.glb" 
-        alt="Nintendo Switch 3D model" 
-        auto-rotate 
-        camera-controls 
-        background-color="#f0f0f0" 
-        style="width: 100%; height: 500px;">
-      </model-viewer>
+      <div class="product"><img src="appleconsole.png"><h3>Apple Console</h3></div>
+      <div class="product"><img src="applecoregpu.png"><h3>Apple Core GPU</h3></div>
+      <div class="product"><img src="appledockstation.png"><h3>Apple Dock Station</h3></div>
+      <div class="product"><img src="appledualpower.png"><h3>Apple Dual Power</h3></div>
+      <div class="product"><img src="appleetherport.png"><h3>Apple Ethernet Port</h3></div>
+      <div class="product"><img src="applefs2024.png"><h3>Apple FS 2024</h3></div>
+      <div class="product"><img src="applefitband.png"><h3>Apple FitBand</h3></div>
+      <div class="product"><img src="applegamepad.png"><h3>Apple Gamepad</h3></div>
+      <div class="product"><img src="applehub-mini.png"><h3>Apple Hub Mini</h3></div>
+      <div class="product"><img src="applehomeassistant.png"><h3>Apple Home Assistant</h3></div>
+      <div class="product"><img src="appleigames.png"><h3>Apple iGames</h3></div>
+      <div class="product"><img src="appleiwork.png"><h3>Apple iWork</h3></div>
+      <div class="product"><img src="applemacbookduo.png"><h3>Apple MacBook Duo</h3></div>
+      <div class="product"><img src="applemagiccharger.png"><h3>Apple Magic Charger</h3></div>
+      <div class="product"><img src="applepencil.png"><h3>Apple Pencil</h3></div>
+      <div class="product"><img src="applepowerbank.png"><h3>Apple PowerBank</h3></div>
+      <div class="product"><img src="appleprinter.png"><h3>Apple Printer</h3></div>
+      <div class="product"><img src="appleread.png"><h3>Apple Read</h3></div>
+      <div class="product"><img src="applereal.png"><h3>Apple Real AR</h3></div>
+      <div class="product"><img src="applesmartcoverpro.png"><h3>Smart Cover Pro</h3></div>
+      <div class="product"><img src="appleusbhub.png"><h3>Apple USB Hub</h3></div>
+      <div class="product"><img src="applevisiontv1.png"><h3>Apple Vision TV 1</h3></div>
+      <div class="product"><img src="applevisiontv2.png"><h3>Apple Vision TV 2</h3></div>
+      <div class="product"><img src="applevision-pro-2.png"><h3>Apple Vision Pro 2</h3></div>
+      <div class="product"><img src="appleairtagspro.png"><h3>AirTags Pro</h3></div>
     </div>
   </div>
-</div>
-    
-  </div>  <!-- Android Products Section -->  <div class="section">
-    <h2>Android Concepts</h2>
+
+  <div class="section">
+    <h2>Microsoft</h2>
     <div class="product-grid">
-      <div class="product">
-        <img src="galaxys26ultra.png" alt="Samsung Galaxy S26">
-        <h3>Samsung Galaxy S26</h3>
-      </div>
-      <div class="product">
-        <img src="galaxyfoldnext.png" alt="Samsung Galaxy Fold Next">
-        <h3>Samsung Galaxy Fold Next</h3>
-      </div>
-      <div class="product">
-        <img src="samsungzroll.png" alt="Samsung Z Roll">
-        <h3>Samsung Z Roll</h3>
-        <p>A revolutionary flexible phone featuring a silicon-carbon battery that survives even extreme bending.</p>
-      </div>
-      <div class="product">
-        <img src="googlepixel10.png" alt="Google Pixel 10">
-        <h3>Google Pixel 10</h3>
-      </div>
-      <div class="product">
-        <img src="xiaomi16.png" alt="Xiaomi 16">
-        <h3>Xiaomi 16</h3>
-      </div>
-      <div class="product">
-        <img src="android-cube-watch.png" alt="Android Cube Smartwatch">
-        <h3>Android Cube Smartwatch</h3>
-      </div>
+      <div class="product"><img src="Msprocessors.png"><h3>MS Processors</h3></div>
+      <div class="product"><img src="windows11phone.png"><h3>Windows 11 Phone</h3></div>
+      <div class="product"><img src="applemacbookairduo.png"><h3>MacBook Air Duo</h3></div>
     </div>
-  </div>  <!-- Asus Section -->  <div class="section">
-    <h2>Asus Concepts</h2>
+  </div>
+
+  <div class="section">
+    <h2>Android / Samsung</h2>
     <div class="product-grid">
-      <div class="product">
-        <img src="rogtablet.png" alt="ROG Gaming Tablet">
-        <h3>ROG Gaming Tablet</h3>
-        <p>The ultimate portable gaming device by ASUS ROG, combining raw power with a sleek design.</p>
-      </div>
+      <div class="product"><img src="galaxys26ultra.png"><h3>Galaxy S26 Ultra</h3></div>
+      <div class="product"><img src="samsunggalaxys26.png"><h3>Galaxy S26</h3></div>
+      <div class="product"><img src="samsungfold.png"><h3>Samsung Fold</h3></div>
+      <div class="product"><img src="samsungzroll.png"><h3>Samsung Z Roll</h3></div>
     </div>
-  </div></body>
-</html>
+  </div>
+
+  <div class="section">
+    <h2>Google</h2>
+    <div class="product-grid">
+      <div class="product"><img src="googlepixel10.png"><h3>Google Pixel 10</h3></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Xiaomi</h2>
+    <div class="product-grid">
+      <div class="product"><img src="xiaomi16.png"><h3>Xiaomi 16</h3></div>
+      <div class="product"><img src="xiaomipadultra16.png"><h3>Xiaomi Pad Ultra 16</h3></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Asus</h2>
+    <div class="product-grid">
+      <div class="product"><img src="asusrogphoenix.png"><h3>ROG Phoenix</h3></div>
+    </div>
+  </div>
+
+</body>
+      </html>.
